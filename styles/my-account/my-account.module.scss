@@ -1,0 +1,1189 @@
+@import "../shared/common.module";
+$background-grad: linear-gradient(#FFFFFF, #F4F8FF) !important;
+
+@mixin error2($backcolor: #FFF0F2, $bordercolor: 1px solid #FFDBE0, $margin: 10px, $width: 99%) {
+    font-size: $normal-text;
+    font-weight: 400;
+    border-radius: 5px;
+    height: auto;
+    width: $width;
+    padding-bottom: 0px !important;
+    background-color: $backcolor;
+    border: $bordercolor  !important;
+    margin-left: $margin;
+}
+
+.go_back {
+    margin-bottom: 30px;
+    margin-top: 7rem;
+    .go_back_main {
+        border: 1px solid $orange;
+        color: $orange;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .go_back_main_add {
+        background-color: $orange;
+        color: $white;
+    }
+
+    .anchor_port {
+        border: 1px solid $orange;
+        color: $orange;
+        border-radius: 5px;
+    }
+}
+
+.go_back_img {
+    height: 20px;
+    width: auto;
+    margin-bottom: 5px;
+}
+
+.go_back_a {
+    font-size: 19px;
+}
+
+.nothing_showing {
+    // height: 100vh;
+    position: relative;
+
+    .loader_image_nothing {
+        position: absolute;
+        margin-top: 20%;
+    }
+    .loader_mascot{
+        height: 250px;
+    }
+}
+
+.error_div_500 {
+    text-align: center;
+    border-top: 1px solid $border-grey;
+    padding-top: 50px;
+
+    .error_heading {
+        font-size: $bigger-head;
+        font-weight: 600;
+        margin-top: 30px;
+        color: $purple;
+    }
+
+    .error_paragraph {
+        font-size: $big-text;
+        margin-top: 10px;
+    }
+
+    .error_button {
+        color: $white;
+        border-radius: 5px;
+        background-color: $orange;
+        margin-bottom: 90px;
+    }
+}
+
+.first_part {
+    margin: 0px auto;
+    .loader_account {
+        border: 1px solid $border;
+        border-radius: 5px;
+        height: 285px;
+        text-align: center;
+        margin-top: 10px;
+        background: $background-grad;
+
+        .loader_image {
+            margin: auto;
+            margin-top: 7rem;
+        }
+    }
+
+    .static_border_bottom {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid $border;
+    }
+
+    .border_adjustment {
+        // padding: 0.6rem 0.2rem !important;
+        font-size: $big-text;
+        font-weight: 600 !important;
+        border-bottom: 2px solid $border-grey;
+        border-top: 2px solid $border-grey;
+    }
+
+    .main_heading {
+        font-size: $header;
+        font-weight: bold;
+        .main_para {
+            font-size: $big-text;
+            line-height: normal;
+        }
+    }
+    .mobile_expired_account {
+        display: none;
+    }
+    .no_account {
+        border-top: 1px solid $border;
+        border-bottom: 1px solid $border;
+        height: 285px;
+        text-align: center;
+
+        .expired_img {
+            margin: auto;
+            margin-top: 5rem;
+        }
+
+        .expired_para {
+            left: 26%;
+            margin-left: auto;
+            font-size: $subheader;
+
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .expired_accounts {
+        min-height: 285px;
+        max-height: 285px;
+
+        .expired_list {
+            display: flex;
+            flex-direction: row;
+            border-bottom: 2px dotted $border;
+
+            .account_name {
+                font-size: $big-text;
+
+                .light_color {
+                    line-height: 0;
+                    font-size: $text;
+                    color: $border;
+                }
+
+                .inprog_account_img {
+                    margin-right: 5px;
+                    height: 24px;
+                    width: 24px;
+                }
+
+                .info_icon_adjustment {
+                    position: relative;
+                    top: -2px;
+
+                    .user_portfolio_info_icon {
+                        width: 1rem;
+                        height: 1rem;
+                        position: relative;
+                        top: 0px;
+                    }
+
+                }
+
+                .delete_icon {
+                    margin-left: auto;
+                    cursor: pointer;
+                }
+
+                .syncing_connected {
+                    display: none;
+                }
+            }
+        }
+
+        .error_connected {
+            margin-top: -15px;
+
+            .error_connect_img {
+                padding-left: 35px;
+                padding-bottom: 0px;
+                padding-top: 0px;
+                margin-top: 9px;
+            }
+
+            .error2 {
+                @include error2;
+
+                .error2_para {
+                    color: #B5747E;
+                    line-height: normal;
+                    padding-top: 10px;
+
+                    span {
+                        color: #8C0858;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .error_2_warning {
+                align-items: center;
+                margin-left: 0px;
+                height: auto;
+                margin-bottom: 10px;
+
+                .cross_connected {
+                    top: 0px;
+                    left: 100%;
+                    float: right;
+                    margin-right: -27px !important;
+                    text-decoration: none;
+                    margin-top: -12px;
+                    cursor: pointer;
+                }
+
+                .error_2_img {
+                    cursor: pointer;
+                    color: $purple;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.second_part {
+    .loader_account {
+        border: 1px solid $border;
+        border-radius: 5px;
+        height: 285px;
+        text-align: center;
+        margin-top: 10px;
+        background: $background-grad;
+
+        .loader_image {
+            margin: auto;
+            margin-top: 7rem;
+        }
+    }
+
+    .static_border_bottom {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid $border;
+    }
+
+    .border_adjustment {
+        // padding: 0.6rem 0.2rem !important;
+        font-size: $big-text;
+        font-weight: 600 !important;
+        border-bottom: 2px solid $border-grey;
+        border-top: 2px solid $border-grey;
+    }
+
+    margin:0px auto;
+
+    .main_heading {
+        font-size: $header;
+        font-weight: bold;
+        display: block;
+    }
+
+    .mobile_expired_account {
+        display: none;
+    }
+
+    .main_para {
+        font-size: $big-text;
+        line-height: normal;
+    }
+
+    .no_account {
+        border-top: 1px solid $border;
+        border-bottom: 1px solid $border;
+        height: 285px;
+        text-align: center;
+
+        .inprog_img {
+            margin: auto;
+            margin-top: 5rem;
+        }
+
+        .inprog_para {
+            left: 26%;
+            margin-left: auto;
+            font-size: $subheader;
+
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .inprogress_accounts {
+        min-height: 285px;
+        max-height: 285px;
+        overflow-y: scroll;
+
+        .expired_list {
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px dashed $border;
+
+            .account_name {
+                font-size: $big-text;
+
+                .light_color {
+                    line-height: 0;
+                    font-size: $text;
+                    color: $border;
+                }
+
+                .inprog_account_img {
+                    margin-right: 5px;
+                    height: 24px;
+                    width: 24px;
+                }
+
+                .info_icon_adjustment {
+                    position: relative;
+                    top: -2px;
+
+                    .user_portfolio_info_icon {
+                        width: 1rem;
+                        height: 1rem;
+                        position: relative;
+                        top: 0px;
+                        margin-bottom: 3px;
+                        fill: $tooltip-icon;
+                        cursor: pointer;
+                    }
+                }
+
+                .syncing_connected {
+                    display: none;
+                }
+
+                .delete_icon {
+                    margin-left: auto;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .error_connected {
+            margin-top: -15px;
+
+            .error_connect_img {
+                padding-left: 35px;
+                padding-bottom: 0px;
+                padding-top: 0px;
+                margin-top: 9px;
+            }
+
+            .error2 {
+                @include error2;
+
+                .error2_para {
+                    color: #B5747E;
+                    line-height: normal;
+                    padding-top: 10px;
+
+                    span {
+                        color: #8C0858;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .error_2_warning {
+                align-items: center;
+                margin-left: 0px;
+                height: auto;
+                margin-bottom: 10px;
+
+                .cross_connected {
+                    top: 0px;
+                    left: 100%;
+                    float: right;
+                    margin-right: -27px !important;
+                    text-decoration: none;
+                    margin-top: -12px;
+                    cursor: pointer;
+                }
+
+                .error_2_img {
+                    cursor: pointer;
+                    color: $purple;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.third_part {
+    margin: 0px auto;
+    margin-top: 40px;
+
+    .desktop_completed_div {
+        display: block;
+    }
+
+    .mobile_completed_version {
+        display: none;
+    }
+
+    .main_heading_mobile {
+        display: none;
+    }
+
+    .mobile_expired_account {
+        display: none;
+    }
+
+    .sync_mobile {
+        display: none;
+    }
+
+    .main_sync {
+        display: flex;
+        justify-content: space-between;
+
+        .sync_all {
+            background-color: $purple;
+            color: white;
+            border: none;
+            height: 32px;
+            width: 8rem;
+        }
+
+        .main_heading {
+            font-size: $header;
+            font-weight: bold;
+        }
+
+        .main_filter {
+            .filter_btn {
+                font-size: 14px;
+                border: 1px solid $border;
+                background-color: $top-footer-bg;
+            }
+        }
+    }
+
+    .loader_account {
+        border: 1px solid $border;
+        border-radius: 5px;
+        height: 285px;
+        text-align: center;
+        margin-top: 10px;
+        background: $background-grad;
+
+        .loader_image {
+            margin: auto;
+            margin-top: 7rem;
+        }
+    }
+
+    .no_account {
+        border-top: 1px solid $border;
+        border-bottom: 1px solid $border;
+        height: 285px;
+        text-align: center;
+        margin-top: 10px;
+
+        .complete_img {
+            margin: auto;
+            margin-top: 5rem;
+        }
+
+        .complete_para {
+            left: 26%;
+            margin-left: auto;
+            font-size: $subheader;
+
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .no_account_mobile {
+        display: none;
+    }
+
+    .connected_accounts {
+        max-height: 285px;
+        min-height: 285px;
+        overflow-y: scroll;
+
+        .connected_list_2 {
+            border-top: 1px solid $border-grey  !important;
+
+            .showing_para {
+                max-height: 0;
+                overflow: hidden;
+            }
+
+            .showing_real_account {
+                height: auto;
+                max-height: 999px;
+            }
+
+            .btn_disable {
+                border: none;
+                background-color: transparent;
+            }
+
+            .account_name {
+                font-size: $normal-text;
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                }
+
+                .light_color {
+                    font-size: $text;
+                    color: $border;
+                    margin-bottom: 0px !important;
+                }
+
+                .right_image {
+                    display: inline;
+                }
+
+                .coins_img {
+                    width: 32px;
+                    height: 32px;
+                }
+
+                .length {
+                    border-bottom: 1px solid $black;
+                    padding: 5px 7px;
+                    cursor: pointer;
+                    display: inline-block;
+                    margin-top: -2px;
+                }
+
+                .add_date {
+                    line-height: 0;
+                    font-size: $text;
+                    color: $border;
+                    padding-left: 35px;
+                    margin-top: -10px;
+                }
+
+                .right_img {
+                    padding-left: 5px;
+                    padding-right: 10px;
+                    display: inline;
+                }
+
+                .inprog_account_img {
+                    margin-right: 5px;
+                    height: 24px;
+                    width: 24px;
+                }
+
+                .info_icon_adjustment {
+                    display: none;
+                    position: relative;
+                    top: -2px;
+
+                    .error_tip {
+                        background-color: $dark-red  !important;
+                        fill: $dark-red  !important;
+                    }
+
+                    .syncing_error {
+                        position: relative;
+                        top: 0px;
+                        fill: $dark-red;
+                    }
+                }
+
+                .syncing_refresh {
+                    display: none;
+                }
+
+                .refresh_icon {
+                    cursor: pointer;
+                    height: 20px;
+                    width: 20px;
+                }
+
+                .down_arrow {
+                    cursor: pointer;
+                }
+
+                .syncing_connected {
+                    display: none;
+                }
+
+                .delete_icon {
+                    margin-left: auto;
+                    padding-left: 10px;
+                    cursor: pointer;
+                }
+            }
+
+            .account_name_2 {
+                font-size: $normal-text;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                .inside_element_img {
+                    height: 22px;
+                    width: 22px;
+                }
+
+                .syncing_refresh {
+                    display: none;
+                }
+            }
+
+            .error_fetch {
+                display: none !important;
+            }
+
+            .all_coins {
+                margin-bottom: 20px !important;
+                border-radius: 5px;
+                background-color: #FCF5CB;
+                width: 90%;
+                margin: auto;
+                border: 1px solid $signup-info-box-border;
+
+                .cross_connected {
+                    top: 0px;
+                    left: 100%;
+                    float: right;
+                    margin-top: -14px;
+                    margin-right: -31px !important;
+                    text-decoration: none;
+                    // margin-top: -12px;
+                    cursor: pointer;
+                }
+
+                .main_coins_div {
+                    display: inline-block;
+
+                    .coins_para {
+                        display: inline-block;
+                        margin-bottom: 0px;
+                        padding: 0.3rem;
+                        margin: auto;
+
+                        .coins_total_img {
+                            height: 24px;
+                            width: 24px;
+                        }
+
+                        .default_coin {
+                            height: 18px;
+                            width: 18px;
+                        }
+
+                        .coins_span {
+                            font-size: $text;
+                        }
+                    }
+                }
+            }
+
+            .error_connected {
+                margin-top: -5px;
+
+                .error_connect_img {
+                    padding-left: 35px;
+                    padding-bottom: 0px;
+                    padding-top: 0px;
+                    margin-top: 9px;
+                }
+
+                .error2 {
+                    @include error2($width: 99%);
+
+                    .error2_para {
+                        color: #B5747E;
+                        line-height: normal;
+                        padding-top: 10px;
+
+                        span {
+                            color: #8C0858;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .error_2_warning {
+                    align-items: center;
+                    margin-left: 0px;
+                    height: auto;
+                    margin-bottom: 10px;
+
+                    .cross_connected {
+                        top: 0px;
+                        left: 100%;
+                        float: right;
+                        margin-right: -27px !important;
+                        text-decoration: none;
+                        margin-top: -12px;
+                        cursor: pointer;
+                    }
+
+                    .error_2_img {
+                        cursor: pointer;
+                        color: $purple;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .connected_list {
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid $border-grey;
+
+            .accordion_item {
+                .accordion_header {
+                    .accordion_button::after {
+                        margin-left: -25px !important;
+                        width: 1.1rem !important;
+                        height: 1.1rem !important;
+                        background-size: 1.1rem;
+                        right: 30px;
+                        top: 17px;
+                        position: absolute;
+                    }
+                    .accordion_button:not(.collapsed) {
+                        color:#000;
+                        background-color: $white;
+                    }
+                }
+            }
+
+            .showing_para {
+                max-height: 0;
+                overflow: hidden;
+                background-color: blue;
+            }
+
+            .showing_real_account {
+                height: auto;
+                max-height: 999px;
+            }
+
+            .btn_disable {
+                border: none;
+                background-color: transparent;
+            }
+
+            .account_name {
+                button {
+                    border: none;
+                    background-color: transparent;
+                }
+
+                font-size: $big-text;
+
+                .light_color {
+                    line-height: 0;
+                    font-size: $text;
+                    color: $border;
+                }
+
+                .right_image {
+                    display: inline;
+                }
+
+                .coins_img {
+                    width: 32px;
+                    height: 32px;
+                }
+
+                .length {
+                    border-bottom: 1px solid $black;
+                    padding: 5px 7px;
+                    cursor: pointer;
+                    display: inline-block;
+                    margin-top: -2px;
+                }
+
+                .add_date {
+                    line-height: 0;
+                    font-size: $text;
+                    color: $border;
+                    padding-left: 35px;
+                    margin-top: -10px;
+                }
+
+                .right_img {
+                    padding-left: 5px;
+                    padding-right: 10px;
+                    display: inline;
+                }
+
+                .inprog_account_img {
+                    margin-right: 5px;
+                    height: 24px;
+                    width: 24px;
+                }
+
+                .info_icon_adjustment {
+                    position: relative;
+                    top: -2px;
+
+
+                    .error_tip {
+                        background-color: $dark-red  !important;
+                        fill: $dark-red  !important;
+                    }
+
+                    .syncing_error {
+                        position: relative;
+                        top: 0px;
+                        fill: $dark-red;
+                    }
+                }
+
+                .syncing_refresh {
+                    display: none;
+                }
+
+                .refresh_icon {
+                    cursor: pointer;
+                    height: 20px;
+                    width: 20px;
+                }
+
+                .syncing_connected {
+                    display: none;
+                }
+
+                .delete_icon {
+                    margin-left: auto;
+                    padding-left: 10px;
+                    cursor: pointer;
+                }
+            }
+
+            .down_arrow {
+                cursor: pointer;
+            }
+
+            .account_name_2 {
+                font-size: $normal-text;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                .inside_element_img {
+                    height: 22px;
+                    width: 22px;
+                }
+
+                .syncing_refresh {
+                    display: none;
+                }
+            }
+
+            .error_fetch {
+                display: none !important;
+            }
+
+            .all_coins {
+                margin-bottom: 20px !important;
+                border-radius: 5px;
+                background-color: #FCF5CB;
+                width: 90%;
+                margin: auto;
+                border: 1px solid $signup-info-box-border;
+
+                .cross_connected {
+                    top: 0px;
+                    left: 100%;
+                    float: right;
+                    margin-top: -14px;
+                    margin-right: -31px !important;
+                    text-decoration: none;
+                    // margin-top: -12px;
+                    cursor: pointer;
+                }
+
+                .main_coins_div {
+                    display: inline-block;
+
+                    .coins_para {
+                        display: inline-block;
+                        margin-bottom: 0px;
+                        padding: 0.3rem;
+                        margin: auto;
+
+                        .coins_total_img {
+                            height: 24px;
+                            width: 24px;
+                        }
+
+                        .default_coin {
+                            height: 18px;
+                            width: 18px;
+                        }
+
+                        .coins_span {
+                            font-size: $text;
+                        }
+                    }
+                }
+            }
+
+            .error_connected {
+                margin-top: -5px;
+
+                .error_connect_img {
+                    padding-left: 35px;
+                    padding-bottom: 0px;
+                    padding-top: 0px;
+                    margin-top: 9px;
+                }
+
+                .error2 {
+                    @include error2($width: 99%);
+
+                    .error2_para {
+                        color: #B5747E;
+                        line-height: normal;
+                        padding-top: 10px;
+
+                        span {
+                            color: #8C0858;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .error_2_warning {
+                    align-items: center;
+                    margin-left: 0px;
+                    height: auto;
+                    margin-bottom: 10px;
+
+                    .cross_connected {
+                        top: 0px;
+                        left: 100%;
+                        float: right;
+                        margin-right: -27px !important;
+                        text-decoration: none;
+                        margin-top: -12px;
+                        cursor: pointer;
+                    }
+
+                    .error_2_img {
+                        cursor: pointer;
+                        color: $purple;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.accounts {
+    overflow-x: hidden;
+}
+
+@media screen and (max-width:1200px) {
+    .go_back {
+        display: flex;
+        justify-content: end;
+    }
+
+    .third_part {
+        .connected_accounts {
+            .connected_list {
+                .second_thing {
+                    margin-top: 20px;
+                }
+
+                .error_fetch {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .first_part {
+        .main_heading {
+            display: none;
+        }
+
+        .no_account {
+            margin-top: 20px;
+        }
+
+        .mobile_expired_account {
+            display: flex !important;
+            justify-content: space-between;
+            margin-top: 15px;
+            border: 1px solid $border-grey;
+            background-color: $portfolio-bg;
+            border-radius: 5px;
+
+            .main_heading_mobile {
+                font-size: $subheader;
+                font-weight: bold;
+            }
+
+            .arrows {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .second_part {
+        .main_heading {
+            display: none !important;
+        }
+
+        .mobile_expired_account {
+            display: flex !important;
+            justify-content: space-between;
+            margin-top: 15px;
+            border: 1px solid $border-grey;
+            background-color: $portfolio-bg;
+            border-radius: 5px;
+
+            .main_heading_mobile {
+                font-size: $subheader;
+                font-weight: bold;
+            }
+
+            .arrows {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .third_part {
+        margin-top: 0px !important;
+
+        .desktop_completed_div {
+            display: none !important;
+        }
+
+        .no_account_desktop {
+            display: none;
+        }
+
+        .no_account_mobile {
+            display: block !important;
+        }
+
+        .mobile_completed_version {
+            display: block !important;
+        }
+
+        .connected_accounts {
+            .connected_list_2 {
+                border-top: 1px solid $border-grey;
+            }
+        }
+
+        .mobile_head {
+            .mobile_expired_account {
+                display: flex !important;
+                justify-content: space-between;
+                margin-top: 15px;
+                border: 1px solid $border-grey;
+                background-color: $portfolio-bg;
+                border-radius: 5px;
+
+                .main_heading_mobile {
+                    font-size: $subheader;
+                    font-weight: bold;
+                }
+
+                .arrows {
+                    cursor: pointer;
+                }
+            }
+
+            .main_heading_mobile {
+                display: inline !important;
+                font-size: $subheader;
+                font-weight: bold;
+            }
+
+            .sync_mobile {
+                display: inline !important;
+            }
+        }
+
+        .main_sync {
+            display: block !important;
+
+            .main_heading {
+                display: none;
+            }
+
+            .sync_desktop {
+                display: none;
+            }
+
+            .main_filter {
+                justify-content: space-between !important;
+
+                .filter_btn {
+                    font-size: 14px;
+                    border: 1px solid $border;
+                    background-color: $top-footer-bg;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:490px) {
+    .second_part {
+        .inprogress_accounts {
+            min-height: 180px !important;
+        }
+
+        .main_heading {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:430px) {
+    .third_part {
+        .connected_accounts {
+            .connected_list {
+                .all_coins {
+                    .main_coins_div {
+                        .coins_para {
+                            margin: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:395px) {
+    .go_back {
+        .go_back_a {
+            font-size: $normal-text;
+        }
+    }
+
+    .third_part {
+        .main_sync {
+            .sync_all {
+                padding: 0px 7px !important;
+            }
+        }
+    }
+}

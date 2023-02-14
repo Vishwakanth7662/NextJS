@@ -1,0 +1,1084 @@
+@import "../shared/common.module";
+
+$border-width: 1px solid $border;
+$green-border: 1px solid $dark-green;
+$background-grad: linear-gradient(#FFFFFF, #F4F8FF) !important;
+$border-error: 1px solid hsl(4, 71%, 37%);
+
+@mixin new-progress-bar($progress: calc(100% - 10.5rem)) {
+    width: $progress;
+    height: 1.7rem !important;
+    margin-left: 0.4rem;
+}
+
+@mixin error2($backcolor: #FFF0F2, $bordercolor: 1px solid #FFDBE0, $margin: 10px) {
+    font-size: $normal-text;
+    font-weight: 400;
+    border-radius: 5px;
+    height: auto;
+    width: 99%;
+    padding-bottom: 0px !important;
+    background-color: $backcolor;
+    border: $bordercolor  !important;
+    margin-left: $margin;
+}
+
+@mixin cross-prog($marginright: -10px) {
+    top: 0px;
+    left: 100%;
+    float: right;
+    margin-right: $marginright  !important;
+    text-decoration: none;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+@mixin polygon-2-prog($padding: 20px) {
+    padding-left: $padding;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: -5px;
+}
+
+@mixin incomplete-para($textcolor: #B5747E, $colorspan: #8C0858, $paddingleft: 10px) {
+    color: $textcolor;
+    line-height: normal;
+    padding-left: $paddingleft;
+    padding-top: 10px;
+
+    span {
+        color: $colorspan;
+        font-weight: bold;
+    }
+}
+
+.nothing_showing {
+    height: 80vh;
+    position: relative;
+    .loader_image_nothing {
+        position: absolute;
+        margin-top:17rem;
+    }
+}
+
+.add_account {
+    margin-top:5rem;
+    .new_progress_bar {
+        #incom_prog {
+            background-color: #DDABB1;
+        }
+    }
+    .error_div_500 {
+        text-align: center;
+        border-top: 1px solid $border-grey;
+        padding-top: 50px;
+
+        .error_heading {
+            font-size: $bigger-head;
+            font-weight: 600;
+            margin-top: 30px;
+            color: $purple;
+        }
+
+        .error_paragraph {
+            font-size: $big-text;
+            margin-top: 10px;
+        }
+
+        .error_button {
+            color: $white;
+            border-radius: 5px;
+            background-color: $orange;
+            margin-bottom: 90px;
+        }
+    }
+
+    .main_container {
+        opacity: 0.9;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        .go_back {
+            margin-top: 15px;
+            .anchor_port{
+                border: 1px solid #fb9c1a;
+                border-radius: 5px;
+                color: #fb9c1a;
+            }
+        }
+    }
+
+    div.first_part {
+        border-right: 1px solid $border-grey;
+        padding-left: 20px;
+
+        .error {
+            font-size: 17px;
+            font-weight: 500;
+            padding-bottom: 0px !important;
+
+            .polygon_2_prog {
+                @include polygon-2-prog;
+            }
+
+            .error2 {
+                @include error2($margin: 0px);
+                margin-top: -7px;
+
+                .warning_para {
+                    @include incomplete-para;
+                }
+            }
+        }
+
+        .new_account {
+            position: relative;
+            margin-bottom: 30px;
+
+            .main_progress {
+                width: 99%;
+                min-height: 52px;
+                border: 1px solid #74A669;
+                border-radius: 5px;
+                display: flex;
+                justify-content: space-between;
+
+                .main_progress_account {
+                    font-size: $big-text;
+                    font-weight: 600;
+                    margin-top: auto;
+                    padding-left:5px;
+                    margin: 0;
+                    line-height: 2.5;
+                }
+
+                .main_progress_sync {
+                    font-size: $big-text;
+                    font-weight: 600;
+                    color: $purple;
+                    padding-right:5px;
+                    margin: 0;
+                    line-height: 2.5;
+
+                    .syncing_span {
+                        padding-left: 5px;
+                    }
+                }
+
+                .sync_icon {
+                    margin: 0;
+                    line-height: 2.5;
+                    padding-right: 1.2rem;
+
+                    .sync_error {
+                        height: 24px;
+                        width: 24px;
+                    }
+                }
+            }
+
+            .new_progress_bar {
+                @include new-progress-bar ($progress: calc(100% - 2.5rem));
+
+                #add_progress {
+                    background-color: $dark-green;
+                }
+            }
+
+            .progress_bar_text {
+                position: absolute;
+                top: 2.7rem;
+                left: 35%;
+            }
+
+            .loader_prog {
+                text-align: center;
+            }
+
+            .polygon_2_prog {
+                @include polygon-2-prog;
+            }
+
+            .error2 {
+                @include error2($margin: 0px);
+                margin-top: -7px;
+                width: 95%;
+                .cross_prog {
+                    @include cross-prog;
+                }
+
+                .warning_para {
+                    .war_continue {
+                        cursor: pointer !important;
+                        color: $purple  !important;
+                        text-decoration: underline !important;
+                    }
+                }
+
+                .warning_para {
+                    @include incomplete-para;
+                }
+            }
+
+            .error_warning {
+                font-size: 17px;
+                font-weight: 500;
+                padding-bottom: 0px !important;
+                margin-top: -6px;
+                width: 99%;
+
+                .polygon_warning {
+                    padding-left: 35px;
+                    padding-bottom: 0px;
+                    padding-top: 0px;
+                    margin-top: -4px;
+                }
+
+                .error2 {
+                    @include error2 ($backcolor: #F5FFF4, $bordercolor: 1px solid #74A669, $margin: 0px);
+                    margin-top: -7px;
+
+                    .cross_prog {
+                        @include cross-prog($marginright: -10px);
+                    }
+
+                    .warning_para {
+                        .war_continue {
+                            cursor: pointer !important;
+                            color: $purple  !important;
+                            text-decoration: underline !important;
+                        }
+                    }
+
+                    .warning_para {
+                        @include incomplete-para($textcolor: #74A669, $colorspan: #74A669, $paddingleft: 18px);
+                    }
+                }
+            }
+        }
+
+        .incomp_exch_div {
+            margin-bottom: 10px;
+
+            .scroll_div {
+                .inprog_main {
+                    display: flex;
+                    margin-top: 10px;
+                    font-size: $big-text;
+
+                    .inprog_loader {
+                        width: 20px;
+                        display: none;
+                        margin-right: 10px !important;
+                        margin-top: 8px;
+                        height: 25px;
+                    }
+
+                    .incom_img {
+                        height: 24px;
+                        width: 24px;
+                    }
+
+                    .new_progress_bar {
+                        @include new-progress-bar;
+
+                        .incomplete_progress {
+                            background-color: #cc8d95;
+                        }
+                    }
+
+                    .incomplete_retry_div {
+                        margin-top: 5px !important;
+
+                        .reconnect_logo {
+                            cursor: pointer;
+                            height: 22px;
+                            width: 30px;
+                        }
+
+                        .retry_prog {
+                            font-size: $big-text;
+                            font-weight: 600;
+                            color: $purple;
+                            text-decoration: underline;
+                            margin-left: 4px;
+                            cursor: pointer;
+                        }
+
+                        .prog {
+                            width: 30% !important;
+                        }
+                    }
+
+                    .incomplete_delete {
+                        width: 18px;
+                        height: 18px;
+                        margin-top: 0.5rem;
+                        cursor: pointer;
+                    }
+                }
+
+                .inprog_warning {
+                    margin-bottom: 15px;
+
+                    .polygon_2_prog {
+                        @include polygon-2-prog;
+                    }
+
+                    .cross_prog {
+                        @include cross-prog;
+                    }
+
+                    .incomplete_error {
+                        font-size: 17px;
+                        font-weight: 400;
+                        border-radius: 5px;
+                        width: 95%;
+                        height: auto;
+                        padding-bottom: 0px !important;
+                        background-color: #FFF0F2;
+                        border: 1px solid #FFDBE0 !important;
+                        margin-top: -7px;
+
+                        .cross_prog {
+                            @include cross-prog
+                        }
+
+                        .incomplete_para {
+                            @include incomplete-para
+                        }
+                    }
+                }
+            }
+
+            .progress {
+                display: flex;
+                height: 2rem !important;
+                overflow: hidden;
+                font-size: $sub-text;
+                background-color: #e9ecef;
+                border-radius: 5px;
+            }
+        }
+
+        .first_header {
+            font-size: $header;
+            margin-bottom: 0.7rem;
+            font-weight: bold;
+        }
+
+        .first_para {
+            font-size: $big-text;
+            line-height: normal;
+        }
+
+        .first_input {
+            width: 98.5%;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            border-radius: 5px;
+            border: $border-width;
+        }
+
+        .boxes {
+            margin-top: 15px;
+            width: 99%;
+            margin-left: 0px;
+            margin-bottom: 10px;
+            height: 410px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            border-top-right-radius: 8px;
+
+            .all_btns {
+                border-right: 1px solid $border-grey;
+                margin-top: 10px;
+                border-bottom: 1px solid #E5E5E5;
+                text-decoration: none !important;
+                font-size: $normal-text;
+                max-height: 100px;
+                .link_button{
+                    text-decoration: none !important;
+                    color:#212529 !important;
+                }
+            }
+            .loader_accounts {
+                margin: auto;
+                text-align: center;
+            }
+            .add_button {
+                height: 90px;
+                width: 117px;
+                font-size: $normal-text;
+                margin-top: 13px !important;
+                background: none;
+                border: none;
+                border-right: 1px solid $border-grey;
+            }
+
+            .clicklable_section_carousel {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                cursor: wait;
+            }
+
+            .boxes_account {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+
+    .prog {
+        width: 30%;
+    }
+
+    .second_part {
+        margin-top: 0px !important;
+        padding: 0rem 1.6rem;
+
+        .mobile_expired_account {
+            display: none;
+        }
+
+        .second_header {
+            font-size: $header;
+            font-weight: bold;
+        }
+
+        .sync_all {
+            background-color: $purple;
+            color: white;
+            border: none;
+        }
+
+        .not_expired {
+            font-size: $normal-text;
+            line-height: 1;
+        }
+
+        .not_expired {
+            margin-top: 0px !important;
+        }
+
+        .expired_account {
+            border: $border-width;
+            border-radius: 5px;
+            text-align: center;
+            height: auto;
+            margin-bottom: 50px;
+            margin-top: 10px !important;
+            background: $background-grad;
+
+            .expired_img {
+                margin-top: 1rem;
+            }
+
+            .expired_para {
+                font-size: $normal-text;
+                margin-top: 10px;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .connected_account {
+            border: $border-width;
+            border-radius: 5px;
+            text-align: center;
+            height: auto;
+            margin-top: 25px !important;
+            background: $background-grad;
+
+            .connected_img {
+                margin-top: 1rem;
+            }
+
+            .connected_para {
+                font-size: $normal-text;
+                margin-top: 10px;
+            }
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        .scroll_div {
+            overflow-y: scroll;
+            height: auto;
+            max-height: 300px;
+            padding: 0px !important;
+            margin-bottom: 25px;
+            padding: 0px 10px 0px 0px !important;
+            overflow-x: hidden;
+
+            .no_account_expired {
+                border-top: 1px solid $border-grey;
+
+                .no_expired_para {
+                    font-size: $big-text;
+
+                    span {
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .loader_account {
+                border: 1px solid $border;
+                border-radius: 5px;
+                height: 285px;
+                text-align: center;
+                margin-top: 10px;
+                background: $background-grad;
+
+                .loader_image {
+                    margin: auto;
+                    margin-top: 7rem;
+                }
+            }
+
+            .connected_main {
+                border-bottom: 1px solid $border-grey;
+                font-size: $big-text;
+
+                .arrow_disable {
+                    background-color: transparent;
+                    border: none;
+                }
+
+                .no_use_div {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    cursor: pointer;
+                }
+
+                .down_arrow_image {
+                    display: none;
+                }
+
+                .account_image {
+                    height: 24px;
+                    width: 24px;
+                }
+
+                .btn_main_disable {
+                    background-color: transparent;
+                    border: none;
+                }
+
+                .function_img {
+                    cursor: pointer;
+                }
+
+                .syncing_connected {
+                    margin-left: 10px;
+                    display: none;
+                    padding-top: 7px;
+                }
+            }
+
+            .showing_para {
+                max-height: 0;
+                overflow: hidden;
+            }
+
+            .showing_real_account {
+                height: auto;
+                max-height: 999px;
+            }
+
+            .inside_connected {
+                border-bottom: 1px solid $border-grey;
+                font-size: $normal-text;
+
+                .expired_retry_btn {
+                    background: transparent;
+                    border: none;
+                    padding: 0;
+                }
+
+                .account_image {
+                    height: 24px;
+                    width: 24px;
+                }
+
+                .connected_inside_img {
+                    height: 20px;
+                    width: 20px;
+                }
+
+                .function_img {
+                    cursor: pointer;
+                }
+
+                .syncing_connected {
+                    margin-left: 10px;
+                    display: none;
+                    padding-top: 7px;
+                }
+            }
+
+            .static_border_bottom {
+                position: sticky;
+                top: 0;
+                left: 0;
+                right: 0;
+                border-bottom: 1px solid $border;
+            }
+
+            th.border_adjustment {
+                font-size: $big-text;
+                font-weight: 600 !important;
+                border-bottom: 2px solid $border-grey;
+            }
+
+            .main_expired {
+                border-bottom: 1px solid $border-grey;
+                font-size: $big-text;
+
+                .account_image {
+                    height: 24px;
+                    width: 24px;
+                }
+
+                .expired_retry_btn {
+                    background: transparent;
+                    border: none;
+                    padding: 0;
+                }
+
+                .syncing_expired_loader {
+                    display: none;
+                }
+
+                .function_img {
+                    cursor: pointer;
+                }
+            }
+
+            .boxes_2_expired {
+                margin-top: 20px !important;
+                margin-bottom: 0px !important;
+
+                .boxes_2_con_ins {
+                    background-color: #F5FFF4 !important;
+
+                    .inside_box_para {
+                        font-size: $subheader  !important;
+                        font-weight: 600;
+                    }
+                }
+
+                .inside_box_3 {
+                    .inside_box_delete {
+                        margin-right: 12px;
+                        margin-left: 10px;
+
+                        .syncing_connected {
+                            margin-left: 10px;
+                            display: none;
+                            padding-top: 7px;
+                        }
+
+                        button {
+                            border: none;
+                            background: transparent;
+                        }
+
+                        .add_opacity {
+                            opacity: 0.5;
+                        }
+
+                        .sync {
+                            font-size: $big-text  !important;
+                            color: $purple;
+                            cursor: pointer;
+                            font-weight: 600;
+                            margin-left: 5px;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .boxes_2_connect {
+                margin-top: 20px !important;
+                border: $green-border  !important;
+                margin-bottom: 0px !important;
+
+                .boxes_2_con_ins {
+                    border-bottom: $green-border  !important;
+                    background-color: #F5FFF4 !important;
+
+                    .inside_box_para {
+                        font-size: $subheader  !important;
+                        font-weight: 600;
+                    }
+                }
+
+                .inside_box_3 {
+                    .disable_delete {
+                        position: absolute;
+                        right: 0;
+                        width: 7rem;
+                        top: 0;
+                        bottom: 0;
+                    }
+
+                    .inside_box_delete {
+                        margin-right: 12px;
+                        margin-left: 10px;
+
+                        .syncing_connected {
+                            margin-left: 10px;
+                            display: none;
+                            padding-top: 7px;
+                        }
+
+                        button {
+                            border: none;
+                            background: transparent;
+                        }
+
+                        .add_opacity {
+                            opacity: 0.5;
+                        }
+
+                        .sync {
+                            font-size: $big-text  !important;
+                            color: $purple;
+                            cursor: pointer;
+                            font-weight: 600;
+                            margin-left: 5px;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .error_connected {
+                margin-top: -5px;
+
+                .error_connect_img {
+                    padding-left: 35px;
+                    padding-bottom: 0px;
+                    padding-top: 0px;
+                    margin-top: 5px;
+                }
+
+                .error2 {
+                    @include error2;
+
+                    .error2_para {
+                        color: #B5747E;
+                        line-height: normal;
+                        padding-top: 10px;
+
+                        span {
+                            color: #8C0858;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .error_2_warning {
+                    align-items: center;
+                    margin-left: 0px;
+
+                    .cross_connected {
+                        top: 0px;
+                        left: 100%;
+                        float: right;
+                        margin-right: -27px !important;
+                        text-decoration: none;
+                        margin-top: -12px;
+                        cursor: pointer;
+                    }
+
+                    .error_2_img {
+                        cursor: pointer;
+                        color: $purple;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .sync_warning {
+
+                    .polygon_2_prog {
+                        @include polygon-2-prog;
+                    }
+
+                    .error2 {
+                        @include error2($margin: 0px);
+                        margin-top: -7px;
+
+                        .cross_prog {
+                            @include cross-prog;
+                        }
+
+                        .warning_para {
+                            .war_continue {
+                                cursor: pointer !important;
+                                color: $purple  !important;
+                                text-decoration: underline !important;
+                            }
+                        }
+
+                        .warning_para {
+                            @include incomplete-para;
+                        }
+                    }
+                
+            }
+
+            .transaction_success {
+                font-size: 17px;
+                font-weight: 500;
+                padding-bottom: 0px !important;
+
+                .polygon_2_prog {
+                    padding-left: 35px;
+                    padding-bottom: 0px;
+                    padding-top: 0px;
+                    margin-top: -10px;
+                }
+
+                .success_2 {
+                    font-size: $normal-text;
+                    font-weight: 400;
+                    border-radius: 5px;
+                    height: auto;
+                    padding-bottom: 0px !important;
+                    background-color: #F5FFF4;
+                    border: 1px solid $dark-green  !important;
+                    margin-left: 10px;
+                    margin-top: -10px;
+
+                    .cross_connected {
+                        top: 0px;
+                        left: 100%;
+                        float: right;
+                        margin-right: -23px !important;
+                        text-decoration: none;
+                        margin-top: -14px;
+                        cursor: pointer;
+                    }
+
+                    .success_para {
+                        color: $dark-green;
+                        line-height: normal;
+                        padding-left: 10px;
+                        padding-top: 10px;
+
+                        span {
+                            color: $dark-green;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .desktop_form {
+        display: block;
+    }
+
+    .mobile_form {
+        display: none;
+    }
+
+    .form_para {
+        .info_icon {
+            padding-bottom: 2px;
+        }
+
+        .click_here {
+            padding-left: 4px;
+            color: $purple;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .details_form {
+        border: 1px solid #BABABA;
+    }
+
+    .bot_form {
+        .broken_robot {
+            height: 268px;
+            width: 242px;
+        }
+    }
+}
+
+@media (min-width:1200px) and (max-width:1333px) {
+    .first_part {
+        .add_button {
+            width: 93% !important;
+            font-size: $text  !important;
+        }
+    }
+}
+
+@media (min-width:767px) and (max-width:864px) {
+    .first_part {
+        .add_button {
+            width: 95% !important;
+            font-size: $text  !important;
+        }
+    }
+}
+
+@media screen and (min-width:767px) and (max-width:823px) {
+    .add_account {
+        .first_part {
+            .boxes {
+                .add_button {
+                    width: 100%;
+                    font-size: $text;
+                }
+            }
+        }
+
+        .second_part {
+            padding: 0rem 1rem 0rem 1.8rem;
+
+            .second_header {
+                font-size: $header;
+            }
+
+            .sync_all {
+                margin-bottom: 2px !important;
+                padding: 3px 9px !important;
+            }
+
+            .scroll_div {
+                .boxes_2 {
+                    .inside_box {
+                        .inside_box_para {
+                            margin-left: 35%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .add_account {
+        .mobile_form {
+            display: block;
+        }
+
+        .desktop_form {
+            display: none;
+        }
+
+        .form_div {
+            .form_heading {
+                font-size: $subheader;
+            }
+            .form_cross_img{
+                margin-top: -7rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:488px) {
+    .add_account {
+        .first_part {
+            border-right: none !important;
+            padding-left: 10px !important;
+
+            .first_header {
+                font-size: $subheader;
+            }
+
+            .incomp_exch_div {
+                .first_header_progress {
+                    font-size: $subheader;
+                }
+            }
+        }
+
+        .second_part {
+            padding: 0rem 0.4rem 0rem 1rem !important;
+
+            .mobile_expired_account {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 15px;
+                border: 1px solid $border-grey;
+                background-color: $portfolio-bg;
+                border-radius: 5px;
+
+                .second_header_mobile {
+                    font-size: 24px !important;
+                    font-weight: bold !important;
+                }
+
+                .arrows {
+                    cursor: pointer;
+                }
+            }
+
+            .second_header {
+                display: none;
+            }
+
+            .sync_all {
+                margin-bottom: 2px !important;
+                padding: 3px 9px !important;
+            }
+
+            .scroll_div {
+                .no_account_expired {
+                    border: none !important;
+                }
+
+                .boxes_2 {
+                    .inside_box {
+                        .inside_box_para {
+                            margin-left: 37%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:390px) {
+    .add_account {
+        .first_part {
+            .boxes {
+                .add_button {
+                    width: 90%;
+                    font-size: $text;
+                }
+            }
+
+            .form_div {
+                .container {
+                    padding-left: 0px !important;
+                    padding-right: 0px !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@import '../shared/common.module';
+
+@mixin icons-white {
+    background-color: $white;
+    height: 56px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 90%;
+    cursor: pointer;
+}
+
+.leftFeedPortfolio {
+    background-color: #130041;
+    width: 70px;
+    padding-bottom: 40px;
+    margin-top: 60px;
+    height: 100%;
+    // position: fixed;
+
+    .main-portfolio-icon {
+        background-color: $white;
+        height: 56px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 90%;
+        cursor: pointer;
+    }
+
+    .homePortfolioIcon {
+        height: 56px;
+        cursor: pointer;
+    }
+
+    .exchangePortfolioIcon {
+        height: 56px;
+        cursor: pointer;
+    }
+
+    .exchangeSettingsActive {
+        @include icons-white;
+    }
+
+    .exchangeTransactionsActive {
+        @include icons-white;
+    }
+
+    .exchangeMyaccountsActive {
+        @include icons-white;
+    }
+
+    .exchangePortfolioActive {
+        @include icons-white;
+    }
+}

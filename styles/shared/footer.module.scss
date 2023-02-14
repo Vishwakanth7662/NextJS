@@ -1,0 +1,61 @@
+@import '../shared/common.module';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.footer {
+    font-family: 'Poppins';
+    background-color: #f4f4f4;
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    .triangle {
+        left: 50%;
+        top: 0;
+    }
+
+    .productsDiv {
+        margin-right: 107px;
+
+        .heading {
+            font-size: $semi-big-header;
+            font-weight: 700;
+        }
+
+        a {
+            font-size: $normal-text;
+            line-height: 36px;
+            color: #404040;
+            text-decoration: none;
+
+            &::before {
+                content: "—";
+                padding-right: 15px;
+            }
+
+        }
+    }
+
+    .followUs {
+        font-size: $semi-big-header;
+        font-weight: 700;
+    }
+
+    .aboutUsBlurb {
+        width: 275px;
+        font-size: $normal-text;
+        line-height: 24px;
+        color: #404040;
+
+        a {
+            cursor: pointer;
+            color: $purple;
+        }
+    }
+}
+
+.copyrightDiv {
+    color: $white;
+    padding: 26px;
+    background-color: #6F6F6F;
+    font-weight: 700;
+    font-size: $normal-text;
+}

@@ -1,0 +1,123 @@
+@import '../shared/common.module';
+
+.main_portfolio {
+    margin-top: 4.5rem !important;
+    height: 100vh;
+    .no_user_portfolio {
+        .coming_data{
+            height: 100vh;
+            overflow-y:scroll;
+            .without_data{
+                margin-top: 50px;
+            }
+        }
+        .body_change_btn {
+            margin-top: -21px;
+            left: 30%;
+            button {
+                background-color: white;
+                color: $purple;
+                font-size: $header;
+                font-weight: 600;
+                letter-spacing: 0px;
+                padding-bottom: 0px !important;
+                padding-top: 3px;
+                border: none;
+                width: auto;
+                background: none;
+            }
+        }
+
+        .no_user_content {
+            min-height: 320px;
+            border: 1px solid grey;
+            border-radius: 13px;
+
+            .no_user_inside {
+                margin-top: 60px;
+                margin-left: auto;
+
+                .no_account_head {
+                    font-size: $semi-big-header;
+                    font-weight: 600;
+                    color: $purple;
+                }
+
+                .no_account_para {
+                    font-size: $big-text;
+                    font-weight: 600;
+                    color: $middle-grey;
+                }
+            }
+
+            .add_account_btn {
+                color: $white;
+                background-color: $orange;
+                border: none;
+                padding: 6px 12px;
+                border-radius: 8px;
+                margin-left: 40px;
+            }
+        }
+
+        .portfolio_img {
+            margin-top: -30px;
+            margin-left: 30px;
+            height: 385px;
+            width: 350px;
+        }
+        .mobile_portfolio_exchange{
+            display: none;
+        }
+        .feed_final{
+            width: 300px;
+        }
+    }
+}
+.user_portfolio_show_loader{
+    min-height: 80vh;
+    img{
+        height: 250px;
+    }
+    .showing_quotes{
+        font-style: italic !important;
+        font-size: 24px !important;
+        font-weight: 500;
+    }
+}
+@media (max-width:1200px) {
+    .main_portfolio{
+        .no_user_portfolio{
+            .no_user_content{
+                .no_user_inside{
+                    margin-top: 20px !important;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                } 
+                .add_account_btn{
+                    margin-bottom: 20px;
+                }
+            }
+            .mobile_portfolio_exchange{
+                display: block !important;
+                height: 385px;
+                width: 335px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .desktop_portfolio_exchange{
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width:991px) {
+    .main_portfolio{
+        margin-top: 1rem !important;
+        .no_user_portfolio{
+            .without_data{
+                margin-top: 20px !important;
+            }
+        }
+    }
+}

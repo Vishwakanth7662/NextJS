@@ -1,0 +1,779 @@
+@import '../shared/common.module';
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+
+.first-loader {
+    margin-top: 10rem;
+}
+
+.taxAnalysis {
+    margin-top: 120px;
+    height: 100vh;
+    overflow-y: scroll;
+
+    .error {
+
+        background-color: #FFF0F2;
+        width: 90%;
+        border: 1px solid $error-msg-red-border;
+        margin: auto;
+        margin-top: 5px;
+        color: #B5747E;
+        height: auto;
+        padding: 10px;
+        border-radius: 5px;
+
+        b {
+            color: #8C0858;
+        }
+
+    }
+
+    .gain {
+        color: #489332;
+    }
+
+    .loss {
+        color: #C15358;
+    }
+
+    .taxFooter {
+
+        .products {
+            margin-top: 5rem;
+
+            div {
+                border: 1px solid #F2EEFF;
+                border-radius: 5px;
+                padding: 21px;
+                padding-top: 50px;
+
+                img {
+                    top: -25px;
+                    left: 47%;
+                }
+
+                .productName {
+                    font-size: $big-text;
+                }
+
+                .description {
+                    font-size: $normal-text;
+                }
+
+                button {
+                    border: 1px solid $orange;
+                    border-radius: 5px;
+                    background-color: $white;
+                    color: $orange;
+                    padding: 5px 10px;
+                }
+            }
+        }
+
+        // MOBILE FOOTER
+
+        .productsMobile {
+            .carouselInner {
+                height: 336px;
+                padding-top: 52px;
+            }
+
+            .productDiv {
+                border: 1px solid #F2EEFF;
+                border-radius: 5px;
+                padding: 21px;
+                padding-top: 50px;
+
+                img {
+                    top: -25px;
+                    left: 47%;
+                }
+
+                .productName {
+                    font-size: $big-text;
+                }
+
+                .description {
+                    font-size: $normal-text;
+                }
+
+                button {
+                    border: 1px solid $orange;
+                    border-radius: 5px;
+                    background-color: $white;
+                    color: $orange;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:991px) {
+        font-size: 16px;
+    }
+
+    .taxSummaryRedirect {
+        background-color: $white;
+        color: $orange;
+        border: 1px solid $orange;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    .planBtn {
+        background-color: $orange;
+        border: none;
+        color: $white;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    .mainHeading {
+        margin-top: 4rem;
+
+        .title {
+            top: -21px;
+
+            @media (max-width:991px) {
+                top: -15px;
+            }
+
+            h1 {
+                font-size: $bigger-head;
+                font-weight: 700;
+                color: $purple;
+                margin: auto;
+                background: $white;
+
+                @media (max-width:991px) {
+                    font-size: $header;
+                    width: 310px;
+                }
+            }
+        }
+    }
+
+    .mainInputs {
+
+        .accordion-item {
+            position: relative;
+
+            .accordion-collapse {
+                position: absolute;
+                border: 1px solid $border-grey;
+                background-color: $white;
+                z-index: +999;
+                width: 100%;
+            }
+        }
+
+        .viewTransactions {
+            background: #fb9c1a;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 0px;
+            text-align: center;
+            width: 100%;
+            margin-top: 32px;
+
+            &:disabled {
+                background-color: $border-grey;
+            }
+        }
+    }
+
+    .yearSelect {
+
+        .dropdownBox {
+            border: 1px solid $border-grey;
+            left: -2px;
+            z-index: +99;
+            background: $white;
+
+            .dropdownBody {
+                padding-left: 14px;
+
+                .years {
+                    background: transparent;
+                    border: none;
+                    width: 100%;
+                    border-bottom: 1px solid $border-grey;
+                }
+            }
+        }
+    }
+
+    .method {
+        .dropdownBox {
+            border: 1px solid $border-grey;
+            z-index: +99;
+            background: $white;
+            width: 100%;
+        }
+
+        .dropdownBody {
+            padding-left: 14px;
+
+            button {
+                background: transparent;
+                border: none;
+                width: 100%;
+                border-bottom: 1px solid $border-grey;
+                text-align: left;
+                padding: 10px;
+            }
+        }
+    }
+
+    .formsSelection {
+        .dropdownBox {
+            border: 1px solid $border-grey;
+            z-index: +99;
+            background: $white;
+            width: 100%;
+        }
+
+        .dropdownBody {
+            padding-left: 14px;
+
+            button {
+                background: transparent;
+                border: none;
+                width: 100%;
+                border-bottom: 1px solid $border-grey;
+                text-align: left;
+                padding: 5px;
+            }
+        }
+    }
+
+    .forms-select-div {
+        width: 20%;
+
+        .forms-select {
+
+            .accordion-collapse {
+                border: 1px solid $border-grey;
+                left: -2px;
+                z-index: +99;
+                background: $white;
+                width: 100%;
+
+                .accordion-body {
+
+                    padding-left: 14px;
+
+                    .forms {
+                        background: transparent;
+                        border: none;
+                        width: 100%;
+                        border-bottom: 1px solid $border-grey;
+                    }
+                }
+            }
+        }
+    }
+
+    .filters {
+        .calendarEl {
+            position: absolute;
+            border: 1px solid black;
+            z-index: 999;
+            margin-top: 8px;
+            width: 300px;
+            padding: 0;
+            top: 89%;
+            left: 0;
+        }
+
+        .filterDiv {
+            width: 18%;
+            min-width: 160.91px;
+            height: auto;
+            margin-top: 20px;
+
+            .datePick {
+                width: 100%;
+                border: 1px solid $border-grey;
+                border-radius: 5px;
+                padding: 10px;
+                color: $middle-grey;
+            }
+
+            .plDropdown {
+                border: 1px solid $border-grey;
+                background-color: $white;
+                z-index: +999;
+                padding: 10px;
+            }
+
+            .filterButton {
+                width: 100%;
+                background: transparent;
+                border: 1px solid $border-grey;
+                border-radius: 5px;
+                padding: 10px;
+                // height: 47px;
+                padding-left: 32px;
+                color: $middle-grey;
+                text-align: start;
+                position: relative;
+
+                button {
+                    background: transparent;
+                    border: 1px solid $orange;
+                    border-radius: 5px;
+                    color: $orange;
+                }
+
+                img {
+                    position: absolute;
+                    left: 10px;
+                    top: 17px;
+                }
+            }
+
+            .currenciesList {
+
+                input {
+                    border: 1px solid $border-grey;
+                }
+
+                border: 1px solid $border-grey;
+                border-radius: 5px;
+                max-height: 200px;
+                overflow-y: scroll;
+                z-index:+999;
+                background-color: $white;
+                padding: 10px;
+
+                .form-check {
+                    border-bottom: 1px solid $border-grey;
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+    .showSelectedFilters {
+        .filter {
+            background-color: $top-footer-bg;
+            border: 1px solid $border-grey;
+            border-radius: 5px;
+            padding: 10px 20px;
+            padding-left: 10px;
+
+            button {
+                background: transparent;
+                border: none;
+                border-right: 1px solid $border-grey;
+                padding-right: 10px;
+            }
+        }
+
+        .clearAll {
+            border: 1px solid $orange;
+            color: $orange;
+            background-color: $white;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+    }
+
+    .tableLabel {
+        font-size: $subheader;
+
+        button {
+            color: $orange;
+            background-color: $white;
+            border: 1px solid $orange;
+            padding: 7px 20px;
+            border-radius: 5px;
+        }
+    }
+
+    .mobileFiltersDiv {
+        border-bottom: 1px solid $border-grey;
+        padding-bottom: 20px;
+
+        .downloadLoader {
+            width: 35px;
+            height: 12px;
+        }
+
+        .download {
+            color: $orange;
+            background-color: $white;
+            border: 1px solid $orange;
+            padding: 7px 20px;
+            border-radius: 5px;
+        }
+
+        .filtersBtn {
+            background-color: $top-footer-bg;
+            border: 1px solid #c9c9c9;
+            border-radius: 5px;
+            padding: 0 20px;
+        }
+
+        .filtersDiv {
+            padding: 14px;
+            top: 45px;
+            background-color: $white;
+            border: 1px solid $border-grey;
+            border-radius: 5px;
+            z-index: +99;
+            height: fit-content;
+
+            .clear {
+                background-color: $white;
+                border-radius: 5px;
+                border: 1px solid $border-grey;
+                padding: 5px 15px;
+            }
+
+            .apply {
+                background-color: $orange;
+                color: $white;
+                border: none;
+                padding: 5px 15px;
+                border-radius: 5px;
+            }
+
+            .calendarEl {
+                position: absolute;
+                border: 1px solid black;
+                width: 300px;
+                z-index: 999;
+                margin-top: 8px;
+                padding: 0;
+                top: 89%;
+                left: 0;
+            }
+
+            .filterDiv {
+                width: 100%;
+                margin-top: 10px;
+
+                .date-pick {
+                    width: 100%;
+                    border: 1px solid $border-grey;
+                    border-radius: 5px;
+                    padding: 10px;
+                    color: $middle-grey;
+                }
+
+                .plDropdown {
+                    border: 1px solid $border-grey;
+                    background-color: $white;
+                    z-index: +999;
+                    padding: 10px;
+                }
+
+                .filterButton {
+                    width: 100%;
+                    background: transparent;
+                    border: 1px solid $border-grey;
+                    border-radius: 5px;
+                    padding: 10px;
+                    height: 47px;
+                    padding-left: 41px;
+                    color: $middle-grey;
+                    text-align: start;
+                    position: relative;
+
+                    button {
+                        background: transparent;
+                        border: 1px solid $orange;
+                        border-radius: 5px;
+                        color: $orange;
+                    }
+
+                    img {
+                        position: absolute;
+                        left: 10px;
+                        top: 17px;
+                    }
+                }
+
+                .currencies-list {
+
+                    input {
+                        border: 1px solid $border-grey;
+                    }
+
+                    border: 1px solid $border-grey;
+                    border-radius: 5px;
+                    max-height: 200px;
+                    overflow-y: scroll;
+                    z-index:+999;
+                    background-color: $white;
+                    padding: 10px;
+
+                    .form-check {
+                        border-bottom: 1px solid $border-grey;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .analysis {
+        word-break: break-all;
+        border-top: 1px solid $border-grey;
+        overflow-y: scroll;
+        height: 700px;
+
+        .loading {
+            top: 4rem;
+            height: 100%;
+            padding-top: 10rem;
+            z-index: +999;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .headings {
+            background: $white;
+            background-blend-mode: lighten;
+            top: 0;
+            border-bottom: 2px solid $border-grey;
+            z-index: 99;
+
+            button {
+                background: transparent;
+                border: none;
+                padding: 0;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        .transactions {
+            border-bottom: 1px solid $border-grey;
+
+            .tooltipComment {
+                max-height: 50px;
+                max-width: 100px;
+                overflow: hidden;
+            }
+
+            .comment {
+                background: none;
+                border: none;
+            }
+
+            .commentBox {
+                border: 1px solid $border-grey;
+                border-radius: 5px;
+                padding: 10px;
+                min-height: 100px;
+            }
+
+            .cross {
+                right: 25px;
+                top: 20px;
+                border: none;
+                background: transparent;
+            }
+
+            .success {
+                padding: 10px;
+                margin: auto;
+                width: 95%;
+                background-color: $green;
+
+                button {
+                    right: -11px;
+                    top: -14px;
+                    background: transparent;
+                    border: none;
+                }
+            }
+
+            .error {
+                width: 95%;
+
+                button {
+                    background: transparent;
+                    border: none;
+                    right: -14px;
+                    top: -12px;
+                }
+            }
+
+            .loader {
+                right: 25px;
+                bottom: 15px;
+                width: 30px;
+            }
+
+            .wordLimit {
+                color: $grey;
+                right: 100px;
+                bottom: 17px;
+            }
+
+            .save {
+                right: 25px;
+                bottom: 15px;
+                border: none;
+                border-radius: 5px;
+                background-color: $orange;
+                color: $white;
+                padding: 3px 17px;
+
+                &:disabled {
+                    background-color: #e5e5e5;
+                    color: #c9c9c9;
+                }
+            }
+
+            .viewId {
+                color: $purple;
+                text-decoration: underline;
+                background: transparent;
+                border: none;
+                padding: 0;
+            }
+
+            .idBox {
+                border: 1px solid $border-dark-grey;
+                background-color: $border-grey;
+                padding: 10px 20px;
+                z-index: +9;
+            }
+        }
+    }
+
+    .analysisMobile {
+        word-break: break-all;
+        overflow-y: scroll;
+        height: 700px;
+
+        .loading {
+            top: 4rem;
+            height: 100%;
+            padding-top: 10rem;
+            z-index: +999;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .transactionDivMobile {
+            border-bottom: 1px solid $border-dark-grey;
+            word-break: break-all;
+
+            .gain {
+                color: #489332;
+            }
+
+            .loss {
+                color: #C15358;
+            }
+
+            .comment {
+                background: none;
+                border: none;
+            }
+
+            .commentBox {
+                border: 1px solid $border-grey;
+                border-radius: 5px;
+                padding: 10px;
+                min-height: 100px;
+            }
+
+            .cross {
+                right: 25px;
+                top: 20px;
+                border: none;
+                background: transparent;
+            }
+
+            .success {
+                padding: 10px;
+                margin: auto;
+                width: 95%;
+                background-color: $green;
+
+                button {
+                    right: -11px;
+                    top: -14px;
+                    background: transparent;
+                    border: none;
+                }
+            }
+
+            .error {
+                width: 95%;
+
+                button {
+                    background: transparent;
+                    border: none;
+                    right: -14px;
+                    top: -12px;
+                }
+            }
+
+            .loader {
+                right: 25px;
+                bottom: 15px;
+                width: 30px;
+            }
+
+            .wordLimit {
+                color: $grey;
+                right: 100px;
+                bottom: 17px;
+            }
+
+            .save {
+                right: 25px;
+                bottom: 15px;
+                border: none;
+                border-radius: 5px;
+                background-color: $orange;
+                color: $white;
+                padding: 3px 17px;
+
+                &:disabled {
+                    background-color: #e5e5e5;
+                    color: #c9c9c9;
+                }
+            }
+
+            span {
+                color: #999999;
+            }
+
+            .col6 {
+                padding: 15px 10px;
+                border-bottom: 1px solid $border-grey;
+            }
+        }
+
+        .transactionDivMobile:nth-last-of-type(odd) {
+            @extend .transactionDivMobile;
+            background-color: #f4f4f4;
+        }
+    }
+
+}
+
+.noAccess {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+
+    .viewSummary {
+        background: $orange;
+        border: none;
+        border-radius: 5px;
+        color: $white;
+        padding: 9px 22px;
+    }
+}

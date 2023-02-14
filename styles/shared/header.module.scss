@@ -1,0 +1,195 @@
+@import '../shared/common.module';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.header {
+    font-family: 'Poppins';
+    background: linear-gradient(90deg, #504080, #8b4bdf);
+    padding-bottom: 10px !important;
+
+    .logoDiv {
+        margin-right: 8%;
+
+        @media (max-width:1235px) {
+            margin-right: 3%;
+        }
+
+        .logo {
+            height: 40px;
+            max-width: 240px;
+        }
+    }
+
+    .navLink {
+        color: $white  !important;
+        font-size: $normal-text;
+        font-weight: 400 !important;
+        cursor: pointer;
+        padding: 18px 0px;
+        position: relative;
+
+        &:hover {
+            &::before {
+                content: "";
+                position: absolute;
+                width: 30px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                text-align: center;
+                bottom: 5px;
+                border-bottom: 2px solid $orange;
+            }
+        }
+
+    }
+
+    .userName {
+        background: transparent;
+        color: $white;
+        border: none;
+        font-size: $big-text  !important;
+        font-weight: 600 !important;
+    }
+
+    .loginBtn {
+        background-color: #301165;
+        border: none;
+        border-radius: 40px;
+        color: #fff !important;
+        font-size: 16px;
+        margin-right: 10px;
+        padding: 7px 25px;
+        text-decoration: none;
+    }
+
+    .signUpBtn {
+        background-color: #fff;
+        border: none;
+        border-radius: 40px;
+        color: #404040;
+        font-size: 16px;
+        margin-right: 15px;
+        padding: 7px 25px;
+        text-decoration: none;
+    }
+
+    .navbarToggler {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        display: -webkit-flex;
+        display: flex;
+        transition: 0.5s ease-in-out;
+        margin-top: 0.4rem;
+    }
+
+    .navbarToggler,
+    .navbarToggler:focus,
+    .navbarToggler:active {
+        outline: none;
+        box-shadow: none;
+        border: 0;
+    }
+
+    .navbarToggler span {
+        margin: 0;
+        padding: 0;
+    }
+
+    .togglerIcon {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: $purple;
+        border-radius: 1px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+        color: $white  !important;
+    }
+
+    .middleBar {
+        margin-top: 0px;
+    }
+
+    /* when navigation is clicked */
+
+    .navbarToggler .topBar {
+        margin-top: 0px;
+        transform: rotate(135deg);
+        background: $white;
+    }
+
+    .navbarToggler .middleBar {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+
+    .navbarToggler .bottomBar {
+        margin-top: 0px;
+        transform: rotate(-135deg);
+        background: $white;
+    }
+
+    /* State when the navbar is collapsed */
+
+    .navbarToggler.collapsed .topBar {
+        margin-top: -10px;
+        transform: rotate(0deg);
+    }
+
+    .navbarToggler.collapsed .middleBar {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+
+    .navbarToggler.collapsed .bottomBar {
+        margin-top: 10px;
+        transform: rotate(0deg);
+    }
+
+    /* Color of 3 lines */
+
+    .navbarToggler.collapsed .togglerIcon {
+        background: $white;
+    }
+
+    .navbarNav {
+        padding-top: 40px;
+        height: 100vh;
+
+        .navLink {
+            text-align: center;
+            background: transparent;
+            border: none;
+        }
+
+        .dropdownMenu {
+            background: transparent;
+            border: 1px solid $white;
+
+            a {
+                color: $white;
+                text-align: center;
+            }
+        }
+
+        .signup {
+            background-color: $orange;
+            color: $white;
+            width: 100%;
+            border: none;
+            border-radius: 50rem;
+            margin-top: 10px;
+        }
+
+        .login {
+            @extend .signup;
+            margin-top: 20px;
+            background-color: $white;
+            color: $black;
+        }
+    }
+}

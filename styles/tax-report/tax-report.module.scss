@@ -1,0 +1,710 @@
+@import '../shared/common.module';
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+
+
+.taxPage {
+    margin-top: 70px;
+    margin-bottom: 3rem;
+    height: 100vh;
+    overflow-y: scroll;
+
+    button {
+        background: transparent;
+        border: none;
+    }
+
+    .error {
+        button {
+            right: -14px;
+            top: -14px;
+        }
+    }
+
+    @media (min-width:991.5px) {
+        .accordion-item {
+            position: relative;
+
+            .accordion-collapse {
+                position: absolute;
+                border: 1px solid $border-grey;
+                background-color: $white;
+                z-index: +999;
+                width: 100%;
+            }
+        }
+    }
+
+
+    .viewSummary {
+        background: $orange;
+        border: none;
+        border-radius: 5px;
+        color: $white;
+        padding: 9px 22px;
+    }
+
+    .desktopForms {
+        .topLine {
+            margin-top: 4rem;
+        }
+
+        .titleDiv {
+            z-index: +99;
+            top: -28px;
+
+            .title {
+                font-weight: 700;
+                color: $purple;
+                font-size: $bigger-head;
+                background-color: $white;
+                width: 256px;
+
+            }
+        }
+
+        .mainForm {
+            .yearSelect {
+                .dropdownBox {
+                    border: 1px solid $border-grey;
+                    z-index: +99;
+                    background: $white;
+
+                    .dropdownBody {
+                        padding-left: 14px;
+
+                        .years {
+                            background: transparent;
+                            border: none;
+                            width: 100%;
+                            border-bottom: 1px solid $border-grey;
+                        }
+
+                        button {
+                            text-align: left;
+                            background: transparent;
+                            border: none;
+                            width: 100%;
+                            border-bottom: 1px solid $border-grey;
+                        }
+                    }
+                }
+            }
+
+            .viewSummary {
+                background: $orange;
+                border: none;
+                border-radius: 5px;
+                color: $white;
+                padding: 9px 22px;
+            }
+        }
+
+        .downloadSection {
+            .yearSelect {
+                .dropdownBox {
+                    border: 1px solid $border-grey;
+                    z-index: +99;
+                    background: $white;
+
+                    .dropdownBody {
+                        padding-left: 14px;
+
+                        .years {
+                            background: transparent;
+                            border: none;
+                            width: 100%;
+                            border-bottom: 1px solid $border-grey;
+                        }
+
+                        button {
+                            text-align: left;
+                            background: transparent;
+                            border: none;
+                            width: 100%;
+                            border-bottom: 1px solid $border-grey;
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+
+            .downloadSectionBtn {
+                background: $orange;
+                border: none;
+                border-radius: 5px;
+                color: $white;
+                padding: 9px 22px;
+
+                &:disabled {
+                    background-color: $border-grey;
+                }
+            }
+
+            .loaderReport {
+                height: 15px;
+            }
+        }
+
+        .downloadNote {
+            a {
+                color: $purple;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        .lastSync {
+            color: #999999;
+        }
+    }
+
+    .mobileForms {
+        .accordion-collapse {
+            width: 100%;
+        }
+
+        .mainHeading {
+            hr {
+                margin-top: 4rem;
+            }
+
+            .title {
+                top: -14px;
+
+                h3 {
+                    font-size: $header;
+                    font-weight: 700;
+                    color: $purple;
+                    background-color: $white;
+                    width: 144px;
+                }
+            }
+        }
+
+        .note {
+            background-color: $top-footer-bg;
+            border: 1px solid $border-grey;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: $normal-text;
+            font-weight: 700;
+
+            a {
+                color: $purple;
+            }
+        }
+
+        .yearsDiv {
+            .yearSelect {
+                .dropdownBox {
+                    border: 1px solid $border-grey;
+                    z-index: +99;
+                    background: $white;
+                    width: 100%;
+
+                    .dropdownBody {
+                        padding-left: 14px;
+
+                        .years {
+                            background: transparent;
+                            border: none;
+                            width: 100%;
+                            border-bottom: 1px solid $border-grey;
+                        }
+
+                        button {
+                            text-align: left;
+                            background: transparent;
+                            border: none;
+                            width: 100%;
+                            border-bottom: 1px solid $border-grey;
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .methodDiv {
+            @extend .yearsDiv;
+        }
+
+        .viewSummary {
+            background: $orange;
+            border: none;
+            border-radius: 5px;
+            color: $white;
+            padding: 9px 22px;
+        }
+
+        .downloadSectionMobile {
+            .downloadNote {
+                a {
+                    color: $purple;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+
+            .yearSelect {
+                .dropdownBox {
+                    border: 1px solid $border-grey;
+                    z-index: +99;
+                    background: $white;
+                    width: 100%;
+
+                    .dropdownBody {
+                        padding-left: 14px;
+
+                        .years {
+                            background: transparent;
+                            border: none;
+                            width: 100%;
+                            border-bottom: 1px solid $border-grey;
+                        }
+
+                        button {
+                            text-align: left;
+                            background: transparent;
+                            border: none;
+                            width: 100%;
+                            border-bottom: 1px solid $border-grey;
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+
+            .downloadSectionBtn {
+                background: $orange;
+                border: none;
+                border-radius: 5px;
+                color: $white;
+                padding: 9px 22px;
+                height: 45px;
+
+                &:disabled {
+                    background-color: $border-grey;
+                }
+            }
+        }
+
+        .lastSync {
+            color: #999999;
+
+            .update {
+                background: transparent;
+                border: none;
+                color: $purple;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .taxFooter {
+        .products {
+            margin-top: 5rem;
+
+            div {
+                border: 1px solid #F2EEFF;
+                border-radius: 5px;
+                padding: 21px;
+                padding-top: 50px;
+
+                img {
+                    top: -25px;
+                    left: 47%;
+                }
+
+                .productName {
+                    font-size: $big-text;
+                }
+
+                .description {
+                    font-size: $normal-text;
+                }
+
+                button {
+                    border: 1px solid $orange;
+                    border-radius: 5px;
+                    background-color: $white;
+                    color: $orange;
+                    padding: 5px 10px;
+                }
+            }
+        }
+
+        // MOBILE FOOTER
+
+        .productsMobile {
+            .carouselInner {
+                height: 336px;
+                padding-top: 52px;
+            }
+
+            .productDiv {
+                border: 1px solid #F2EEFF;
+                border-radius: 5px;
+                padding: 21px;
+                padding-top: 50px;
+
+                img {
+                    top: -25px;
+                    left: 47%;
+                }
+
+                .productName {
+                    font-size: $big-text;
+                }
+
+                .description {
+                    font-size: $normal-text;
+                }
+
+                button {
+                    border: 1px solid $orange;
+                    border-radius: 5px;
+                    background-color: $white;
+                    color: $orange;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+
+    .updateLoader {
+        div {
+            margin-top: 8rem;
+
+            @media (max-width:991px) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .taxReport {
+        margin-top: 30px;
+
+        .reportContent {
+            .note {
+                background-color: $light-yellow-pending;
+                font-size: $normal-text;
+                border-radius: 5px;
+                padding: 14px;
+
+                a {
+                    color: $purple;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+
+            .firstBox {
+                border: 1px solid $border-grey;
+                border-radius: 5px;
+                padding: 30px;
+                font-size: $normal-text;
+
+                h2 {
+                    font-weight: 700;
+                    font-size: $subheader;
+
+                    button {
+                        color: $purple;
+                        background: transparent;
+                        border: none;
+                        font-size: $normal-text;
+                    }
+                }
+
+                .col4 {
+                    margin-bottom: 10px;
+                    word-break: break-all;
+                }
+            }
+
+            .taxableIncome {
+                width: 50%;
+                border: 1px solid $border-grey;
+                border-radius: 5px;
+                padding: 30px;
+                font-size: $normal-text;
+
+                h3 {
+                    font-weight: 700;
+                    font-size: $subheader;
+                }
+
+                .col6 {
+                    margin-bottom: 10px;
+                    word-break: break-all;
+                }
+            }
+
+            .lostStolen {
+                @extend .taxableIncome;
+            }
+
+            .otherIncome {
+                @extend .taxableIncome;
+            }
+
+            .lowerRight {
+                .settings {
+                    @extend .taxableIncome;
+                    width: 100%;
+                }
+
+                .reviewBoxes {
+                    border: 1px solid $border-grey;
+                    border-radius: 5px;
+                    padding: 14px;
+
+                    a {
+                        color: $purple;
+                    }
+                }
+            }
+
+
+            .capital-summary {
+                h2 {
+                    font-size: $big-subheader;
+                    font-weight: bolder;
+                    padding: 20px;
+                    padding-left: 0;
+                    border-bottom: 2px solid $border-dark-grey;
+                    border-top: 1px solid $border-grey;
+                }
+
+                .first-div {
+                    font-size: $big-text;
+                    border-bottom: 1px solid $border-dark-grey;
+                    padding-bottom: 10px;
+
+                    .col4 {
+                        padding: 10px 0;
+                    }
+                }
+
+                .second-div {
+                    @extend .first-div;
+                    padding-top: 10px;
+
+                    .col6 {
+                        padding: 10px 0;
+                    }
+                }
+
+                .third-div {
+                    @extend .second-div;
+                }
+
+                .fourth-div {
+                    @extend .second-div;
+                }
+
+                .fifth-div {
+                    @extend .second-div;
+                }
+
+                .sixth-div {
+                    @extend .second-div;
+                }
+            }
+
+            .settings {
+                .title {
+                    font-size: $big-subheader;
+                    font-weight: bolder;
+                    padding: 20px;
+                    padding-left: 0;
+                    border-bottom: 2px solid $border-dark-grey;
+                    border-top: 1px solid $border-grey;
+                }
+
+                .first {
+                    font-size: $big-text;
+                    border-bottom: 1px solid $border-dark-grey;
+                    padding-bottom: 10px;
+
+                    .col6 {
+                        padding: 10px 0;
+                    }
+                }
+
+                .second {
+                    @extend .first;
+                    padding-top: 10px;
+                }
+
+                .calculation-method {
+                    .calculation {
+                        font-size: $big-subheader;
+                        font-weight: bolder;
+                        border: none;
+                        padding-top: 30px;
+                        padding-bottom: 10px;
+                    }
+
+                    .method {
+                        .accordion-button::after {
+                            background-size: 16px;
+                            margin-top: 2px;
+                        }
+
+                        .accordion-button:not(.collapsed)::after {
+                            margin-top: -5px;
+                        }
+
+                        .accordion-body {
+                            padding: 5px 14px;
+                            padding-bottom: 0;
+
+                            .ranges {
+                                width: 100%;
+                                text-align: start;
+                                border: none;
+                                padding-bottom: 5px;
+                                padding-top: 5px;
+                                background-color: transparent;
+                                border-bottom: 1px solid $border-grey;
+                            }
+
+                            button {
+                                border: none;
+                                background: transparent;
+                                padding: 10px 0;
+                            }
+
+                            .last {
+                                @extend .ranges;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+
+
+
+                .check-accounts {
+                    font-size: $big-text;
+                    border: 1px solid $border-grey;
+                    border-radius: 5px;
+                    height: 55px;
+                    padding: 14px;
+                    background-color: $portfolio-bg;
+
+                    span {
+                        font-weight: 700;
+                    }
+
+                    a {
+                        color: $purple;
+                    }
+                }
+            }
+
+            .form-download {
+
+                margin-top: 74px;
+
+                .heading {
+                    .line {
+                        border: 1px solid $border-grey;
+                    }
+
+                    .title {
+                        top: -20px;
+
+                        h1 {
+                            font-size: $bigger-head;
+                            color: $purple;
+                            width: 254px;
+                            margin: auto;
+                            font-weight: 700;
+                            background-color: $white;
+                        }
+                    }
+                }
+
+                .form-types {
+                    .subtitle {
+                        font-size: $big-subheader;
+                        font-weight: 700;
+                    }
+
+                    .types {
+                        border-bottom: 1px solid $border-grey;
+                        padding: 15px;
+                        font-size: $big-text;
+
+                        label {
+                            font-weight: 700;
+                        }
+                    }
+
+                    .download-form-div {
+                        .download-form-button {
+                            background-color: $orange;
+                            border: none;
+                            border-radius: 5px;
+                            color: $white;
+                            font-size: $big-text;
+                            padding: 13px 24px;
+
+                            &:disabled {
+                                background-color: $border-grey;
+                            }
+
+                            &:hover {
+                                background-color: #EA8D0D;
+                            }
+                        }
+                    }
+
+                    .form-preview {
+                        border: 1px solid $border-grey;
+                        height: 486px;
+                        font-size: $header;
+                    }
+                }
+            }
+        }
+
+        // MOBILE VIEW
+
+        .mobileContent {
+            .capitalDiv {
+
+                a {
+                    color: $purple;
+                }
+
+                .col4,
+                .col6 {
+                    padding: 10px;
+                }
+
+                .taxAnalysisLink {
+                    padding-bottom: 10px;
+
+                    a {
+                        color: $purple;
+                        text-decoration: underline;
+                    }
+                }
+
+                .heading {
+                    border-top: 1px solid $border-grey;
+                    border-bottom: 1px solid $border-grey;
+                }
+
+                .total {
+                    border-top: 1px solid $border-grey;
+                }
+            }
+        }
+
+    }
+}

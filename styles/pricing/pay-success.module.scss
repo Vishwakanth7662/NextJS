@@ -1,0 +1,66 @@
+@import '../shared/common.module';
+
+.paySuccess {
+    height: 100%;
+    margin-top: 70px;
+    margin-bottom: 10rem;
+
+    .mascot {
+        margin-top: 7rem;
+    }
+
+    .thanks {
+        h1 {
+            color: $success-msg-green-border;
+            font-size: $head-mobile;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: $big-text;
+        }
+    }
+
+    .invoice {
+        max-width: 42.5rem;
+        height: auto;
+        border: 1px solid $border-grey;
+        border-radius: 5px;
+        padding: 35px;
+
+        b {
+            font-size: $big-text;
+        }
+
+        .details {
+            .col6 {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                font-size: $big-text;
+                border-bottom: 1px solid $border-grey;
+                word-break: break-all;
+            }
+        }
+
+        .saveInvoice {
+            button {
+                border: 1px solid #c9c9c9;
+                background-color: $top-footer-bg;
+                font-size: $big-text;
+                padding: 10px 25px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .homeButton {
+        button {
+            border: none;
+            background-color: $orange;
+            color: $white;
+            font-size: $big-subheader;
+            border-radius: 5px;
+            padding: 7px 25px;
+        }
+    }
+}

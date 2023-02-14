@@ -1,0 +1,35 @@
+@import '../shared/common.module';
+
+.premiumPlan {
+    .mainTitle {
+        font-size: $header;
+        font-weight: 600;
+
+        button {
+            background-color: $orange;
+            color: $white;
+            border: none;
+            border-radius: 5px;
+            font-size: $normal-text;
+            padding: 10px;
+            margin-top: 12px;
+        }
+
+        .planName {
+            color: $purple;
+
+            .price {
+                color: #999999;
+                text-decoration: line-through;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .featureBorder {
+        border-bottom: 1px solid $top-footer-bg;
+        line-height: 50px;
+        margin: 0;
+        padding: 0;
+    }
+}
