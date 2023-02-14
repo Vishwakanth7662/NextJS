@@ -1,0 +1,86 @@
+{
+  "executionRoleArn": "arn:aws:iam::620903003925:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ui-service/",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "portMappings": [
+        {
+          "hostPort": 4200,
+          "protocol": "tcp",
+          "containerPort": 4200
+        }
+      ],
+      "cpu": 0,
+      "environment": [
+        {
+          "name": "DD_AGENT_HOST",
+          "value": "ui-service.staging.crptm.net"
+        },
+        {
+          "name": "DD_ENV",
+          "value": "staging"
+        },
+        {
+          "name": "DD_SERVICE",
+          "value": "ui-service"
+        }
+      ],
+      "image": "620903003925.dkr.ecr.us-east-1.amazonaws.com/ui-service:latest",
+      "disableNetworking": false,
+      "essential": true,
+      "name": "ui-service"
+    },
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ui-service/",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "portMappings": [],
+      "cpu": 0,
+      "environment": [
+        {
+          "name": "DD_APM_ENABLED",
+          "value": "true"
+        },
+        {
+          "name": "ECS_FARGATE",
+          "value": "true"
+        }
+      ],
+      "secrets": [
+        {
+          "valueFrom": "arn:aws:ssm:us-east-1:620903003925:parameter/datadog-api-key",
+          "name": "DD_API_KEY"
+        }
+      ],
+      "image": "datadog/agent:latest",
+      "disableNetworking": false,
+      "essential": false,
+      "name": "ui-service-datadog"
+    }
+  ],
+  "memory": "2048",
+  "taskRoleArn": "arn:aws:iam::620903003925:role/ecsTaskExecutionRole",
+  "compatibilities": [
+    "EC2",
+    "FARGATE"
+  ],
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:620903003925:task-definition/ui-service",
+  "family": "ui-service",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "cpu": "1024"
+}
