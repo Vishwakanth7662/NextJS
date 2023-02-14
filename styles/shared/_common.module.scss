@@ -1,0 +1,138 @@
+// @import "env-variables";
+@import "variable";
+
+.box-shadow {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.error {
+    background-color: #FFF0F2;
+    width: 90%;
+    border: 1px solid $error-msg-red-border;
+    margin: auto;
+    margin-top: 5px;
+    color: #B5747E;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+
+    b {
+        color: #8C0858;
+    }
+
+}
+
+// * {
+//     outline: none !important;
+// }
+
+.main-view-container {
+    z-index: 1;
+    padding: 2rem 0px;
+}
+
+.color-purple {
+    color: $purple  !important;
+}
+
+.color-orange {
+    color: $orange  !important;
+}
+
+.color-green-1 {
+    color: $success  !important;
+}
+
+.color-red {
+    color: $failure  !important;
+}
+
+.btn-app-primary {
+    color: $white  !important;
+    background-color: $purple  !important;
+    border-color: $purple  !important;
+    border-radius: 50px !important;
+    font-size: $text  !important;
+}
+
+button.btn-app-primary-outline {
+    color: $purple  !important;
+    text-decoration: none !important;
+    background-color: $white  !important;
+    border-color: $purple  !important;
+    padding: 5px 18px !important;
+    border-radius: 50px !important;
+
+    &:hover {
+        color: $white  !important;
+        text-decoration: none !important;
+        background-color: $purple  !important;
+        border-color: $purple  !important;
+        padding: 5px 18px !important;
+        border-radius: 50px !important;
+    }
+}
+
+.btn-app-secondary {
+    color: $white  !important;
+    background-color: $orange  !important;
+    border-color: $orange  !important;
+    border-radius: 50px !important;
+    font-size: $text  !important;
+}
+
+.map-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url($map);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -9999;
+    margin-top: 77px;
+}
+
+// ::-webkit-scrollbar {
+//     width: 6px;
+//     height: 6px;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//     background: $purple;
+//     border-radius: 3px;
+// }
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tooltip>div.tooltip-inner {
+    background: $tooltip-bg  !important;
+    color: $black  !important;
+    border: 1px solid $border;
+
+    .tooltip-text-size {
+        font-size: $small-text;
+        background: $tooltip-bg;
+        color: $black;
+        font-weight: 700;
+    }
+}
+
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before,
+.bs-tooltip-top div.tooltip-arrow::before {
+    top: -1px;
+    border-width: 0.4rem 0.4rem 0;
+    border-top-color: $border  !important;
+}
+
+.disabled-link {
+    pointer-events: none;
+}

@@ -1,0 +1,157 @@
+@import '../shared/common.module';
+
+.addOn {
+    margin-top: 120px;
+    margin-bottom: 70px;
+
+    .mainTitle {
+        .titleDiv {
+            top: -23px;
+
+            h2 {
+                color: $purple;
+                font-weight: 700;
+                font-size: $bigger-head;
+                width: 218px;
+                background-color: $white;
+            }
+        }
+    }
+
+    .tax-button {
+        color: $orange;
+        border: 1px solid $orange;
+        background-color: $white;
+        border-radius: 5px;
+        padding: 5px 25px;
+    }
+
+    .totalAmountDiv {
+        font-size: $header;
+        font-weight: 600;
+
+        span {
+            font-size: $head;
+            font-weight: 700;
+            color: $purple;
+        }
+
+        .lilNote {
+            font-size: $big-text;
+            padding-left: 20px;
+        }
+
+        button {
+            color: $white;
+            background-color: $orange;
+            border: none;
+            border-radius: 5px;
+            font-size: $big-text;
+            padding: 10px 20px;
+
+            &:disabled {
+                background-color: #E5E5E5;
+                border: 1px solid $border-grey;
+                color: #c9c9c9;
+            }
+        }
+    }
+
+    .error {
+        button {
+            border: none;
+            background: transparent;
+            right: -16px;
+            top: -14px;
+        }
+    }
+
+    .addOnsDiv {
+        .mainBox {
+            width: 30%;
+            background-color: $top-footer-bg;
+            border-radius: 5px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+
+            @media (max-width:768px) {
+                width: 98%;
+            }
+
+            .year {
+                font-size: $semi-big-header;
+                color: $orange;
+                font-weight: 700;
+                margin-top: 35px;
+                border-bottom: 1px solid $border-grey;
+
+                span {
+                    font-size: $big-text;
+                    color: $black;
+                    font-weight: 400;
+                }
+            }
+
+            .price {
+                color: $purple;
+                font-weight: 700;
+                font-size: $head;
+            }
+
+            .check {
+                top: 42px;
+                right: 20px;
+            }
+
+            .addOnMsg {
+                border: 1px solid $border-grey;
+                background-color: #c9c9c9;
+                padding: 10px;
+                z-index: 99;
+                top: 80px;
+                width: 50%;
+                right: 0
+            }
+        }
+
+        .mainBoxSelected {
+            @extend .mainBox;
+            background-color: $purple;
+
+            .year {
+                span {
+                    font-size: $big-text;
+                    color: $white;
+                    font-weight: 400;
+                }
+            }
+
+            .price {
+                color: $white;
+            }
+
+            .planName {
+                color: $white;
+            }
+        }
+    }
+
+    @media (max-width:768px) {
+        .mainTitle {
+            .titleDiv {
+                top: -14px;
+
+                h2 {
+                    font-size: $header;
+                    width: 150px;
+                }
+            }
+        }
+
+        .totalAmountDiv {
+            span {
+                font-size: $big-header;
+            }
+        }
+    }
+}

@@ -1,0 +1,461 @@
+@import '../shared/common.module';
+
+.pricing {
+    margin-top: 40px;
+
+    .confirmPopup {
+        width: 60%;
+        background-color: $white;
+        border: 1px solid $border-grey;
+        top: 7rem;
+        top: 50%;
+        left: 20%;
+        z-index: +999;
+        padding: 20px;
+
+        img {
+            height: 20px;
+        }
+
+        button {
+            border: none;
+            background-color: $orange;
+            color: $white;
+            padding: 10px 25px;
+            border-radius: 5px;
+        }
+    }
+
+    .errorPopup {
+        right: 20px;
+        top: 7rem;
+        background-color: $white;
+        color: #C15358;
+        border: 1px solid $border-grey;
+        background-color: #FFF0F2;
+        z-index: 99999;
+        padding: 10px;
+        border-radius: 5px;
+
+        button {
+            top: 6.2rem;
+            background: transparent;
+            border: none;
+            right: 4px;
+        }
+    }
+
+    .free_portfolio {
+        position: relative;
+
+        .free_portfolio_inside {
+            cursor: pointer;
+            border: 2px dotted $purple;
+            box-shadow: 8px -6px 2px 1px #7144B2;
+            animation: float 1.5s infinite;
+
+            .imgInsideOffer {
+                margin-top: -20px;
+                margin-left: -10px;
+            }
+        }
+
+        .launchOffer {
+            position: absolute;
+            font-size: $big-text;
+            left: 10%;
+            margin-top: -23px;
+            color: $white;
+            background-color: #7144B2;
+            font-weight: 500;
+            transform: skew(-15deg);
+            padding: 2px 5px;
+        }
+
+        p {
+            font-size: $big-text;
+            font-weight: 400;
+            margin-bottom: 10px;
+            animation: change 1.5s infinite;
+
+            span {
+                color: $orange;
+                font-weight: 700;
+                font-size: $subheader;
+                animation: spanChange 1.5s infinite;
+            }
+
+            .bold_free {
+                color: $body;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                background-color: $white;
+            }
+
+            49% {
+                background-color: $white;
+            }
+
+            50% {
+                background-color: #7144B2;
+            }
+
+            100% {
+                background-color: #7144B2;
+                // transform: translatey(0px);
+            }
+        }
+
+        @keyframes change {
+            0% {
+                color: $body;
+            }
+
+            49% {
+                color: $body;
+            }
+
+            50% {
+                color: $white;
+            }
+
+            100% {
+                color: $white;
+            }
+        }
+
+        @keyframes spanChange {
+            0% {
+                color: $orange;
+            }
+
+            49% {
+                color: $orange;
+            }
+
+            50% {
+                color: $white;
+            }
+
+            100% {
+                color: $white;
+            }
+        }
+    }
+
+    .mainHeading {
+        font-size: $bigger-head;
+        font-weight: bold;
+        color: $purple;
+    }
+
+    .mainSubheading {
+        font-size: $big-text;
+        font-weight: bold;
+    }
+
+    .buy-error {
+        b {
+            color: #C15358;
+        }
+
+        color: #C15358;
+        background-color: #FFF0F2;
+        border: 1px solid #FFDBE0;
+        border-radius: 5px;
+        padding: 10px 15px;
+    }
+
+    .mainPara {
+        font-size: $big-text;
+    }
+
+    .leftColumn {
+        border-radius: 5px;
+        margin-top: 0;
+        padding: 1rem;
+        padding-top: 11.7rem;
+        padding-bottom: 6.5rem;
+
+        @media (min-width:768px) and (max-width: 991px) {
+            padding: 0;
+            padding-top: 12.2rem;
+            padding-bottom: 6.5rem;
+        }
+    }
+
+    .titleName {
+        font-size: $header;
+        color: $purple;
+        font-weight: bold;
+        // border-bottom: 1px solid $white;
+        // border-top: 1px solid $white;
+        margin: 0px;
+        padding: 0px;
+        line-height: 50px;
+    }
+
+    .plansContainer {
+        overflow-x: auto;
+    }
+
+    .plansContainer::-webkit-scrollbar {
+        display: none;
+    }
+
+    .centerColumn {
+        flex-shrink: 0;
+        border-radius: 5px;
+        background: $pale-yellow;
+        width: 248px;
+    }
+
+    .topPrice {
+        height: 105px;
+        font-size: $big-text;
+        word-break: break-all;
+
+        img {
+            top: 46%;
+            right: 13px;
+        }
+
+        button {
+            width: 90%;
+            background: transparent;
+            border: none;
+            border-radius: 5px;
+        }
+
+        span {
+            font-size: $head;
+            color: $orange;
+            font-weight: bold;
+
+            &.cost-cut {
+                color: $middle-grey;
+                text-decoration: line-through;
+            }
+
+            &.cost {
+                color: $orange;
+            }
+        }
+    }
+
+    .subsChoice {
+        border: 1px solid $border-grey;
+        border-radius: 5px;
+        background-color: $white;
+        width: 416px;
+        z-index: +99;
+        top: 227px;
+        right: 0px;
+
+        .yearlyChoice {
+            border: none;
+            background: transparent;
+            height: 63px;
+            padding: 18px;
+            border-bottom: 1px solid $border-grey;
+
+            .choicePrice {
+                color: $purple;
+                font-weight: 700;
+                font-size: $header;
+
+                .cut {
+                    color: $down-footer-bg;
+                    text-decoration: line-through;
+                }
+            }
+        }
+
+        .selectedYearlyChoice {
+            @extend .yearlyChoice;
+            background-color: #F4F4F4;
+        }
+    }
+
+    .centerColBtn {
+        font-size: $big-text;
+        color: $white;
+        background: $orange;
+        border-radius: 5px;
+        border: none;
+
+        &:hover {
+            background: $orange;
+        }
+    }
+
+    .centerColBtnSelected {
+        @extend .centerColBtn;
+        background-color: $dark-green;
+        cursor: default;
+
+        &:hover {
+            background-color: $dark-green;
+        }
+    }
+
+    .subHeading {
+        font-size: $header;
+        font-weight: 600;
+        color: $purple;
+        border-bottom: 1px solid $top-footer-bg;
+        margin: 0px;
+        padding: 0px;
+        line-height: 50px;
+        padding: 0 17px;
+
+        @media (max-width:991px) {
+            padding: 0 8px;
+        }
+    }
+
+    .subPara {
+        font-size: 18px;
+        border-bottom: 1px solid #FFFFFF;
+        margin: 0px;
+        padding: 0px;
+        line-height: 50px;
+
+        @media (max-width:991px) {
+            font-size: $normal-text;
+        }
+
+        @media (min-width : 1400px) {
+            .largeScreensSpace {
+                display: none !important
+            }
+        }
+    }
+
+    .subParaLeft {
+        @extend .subPara;
+        border-bottom: 1px solid $top-footer-bg;
+        padding: 0 17px;
+
+        @media (max-width:991px) {
+            padding: 0 8px;
+        }
+    }
+
+    .payment {
+        border-left: 2px solid $orange;
+    }
+
+    .payment-heading {
+        font-size: $header;
+        color: $purple;
+        font-weight: 600;
+    }
+
+    .mobileView {
+
+        .plansGrid::-webkit-scrollbar {
+            display: none;
+        }
+
+        .plansGrid {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 92%;
+            gap: 10px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            overscroll-behavior-inline: contain;
+
+            .mobilePlan {
+                background-color: $pale-yellow;
+                width: 100%;
+                border-radius: 5px;
+                padding-top: 12px;
+                height: fit-content;
+
+                .selectDiv {
+                    top: 11.2rem;
+                }
+
+                .name {
+                    color: $purple;
+                    font-weight: 700;
+                    font-size: $head-mobile;
+                }
+
+                .price {
+                    font-weight: 700;
+                    font-size: $normal-text;
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 5px;
+
+                    p {
+                        color: #404040;
+                        display: inline;
+
+                        span {
+                            color: $orange;
+                            font-size: $head;
+                        }
+                    }
+                }
+
+                .subsChoice {
+                    width: 100%;
+                    left: 0;
+                    top: 10.7rem;
+                }
+
+
+                .feature {
+                    padding: 15px 0;
+                    border-bottom: 1px solid $white;
+                    padding-left: 35px;
+                    padding-right: 0;
+
+                }
+
+                .availability {
+                    padding: 15px 0;
+                    border-bottom: 1px solid $white;
+                    padding-right: 35px;
+                    padding-left: 0;
+                }
+
+
+                .showAll {
+                    button {
+                        background: transparent;
+                        border: none;
+                        color: $purple;
+                        font-weight: 500;
+                        font-size: $normal-text;
+                    }
+
+                    .arrow {
+                        background-color: $white;
+                        bottom: -6px;
+                        height: 30px;
+
+                        button {
+                            left: 46%;
+                            bottom: 16px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+
+
+    }
+
+
+}

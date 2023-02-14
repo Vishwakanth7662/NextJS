@@ -1,0 +1,26 @@
+@import '../../shared/common';
+
+.access-denied {
+    .mascot {
+        margin-top: 8rem;
+    }
+
+    h1 {
+        color: $error-msg-red-text;
+        font-size: $head-mobile;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: $big-text;
+    }
+
+    button {
+        background-color: $orange;
+        border: none;
+        color: $white;
+        font-size: $big-text;
+        padding: 13px 24px;
+        border-radius: 5px;
+    }
+}

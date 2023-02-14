@@ -1,0 +1,415 @@
+@import "../shared/common.module";
+.signup_page {
+    .subscribe_div {
+        padding: 0;
+        margin-top: 16px;
+        position: relative;
+
+        .subscribe_label {
+            position: absolute;
+            color: $banner-para;
+            left: 2px;
+        }
+
+        .subscribe_input {
+            position: absolute;
+            background-color: $border-grey;
+            border: 1px solid $middle-grey;
+            background-image: url($env+"/toggle-circle.svg");
+
+            &:focus {
+                background-image: url($env+"/toggle-circle.svg");
+            }
+
+            &:checked {
+                background-color: #489332;
+                border: 1px solid $middle-grey;
+            }
+
+            top: 2px;
+            right: 0;
+        }
+    }
+
+    .show_icon {
+        display: block;
+    }
+
+    .hide_icon {
+        display: none;
+    }
+
+    .tnc {
+        font-size: $text;
+        color: $banner-para;
+
+        .tnc_links {
+            color: $purple;
+            font-weight: 600;
+        }
+    }
+
+    .confirm_pwd_info {
+        background-color: $signup-info-box;
+        border: 1px solid $signup-info-box-border;
+        border-radius: 5px;
+        font-size: $normal-text;
+        height: 36px;
+        padding: 4px 44px;
+        margin-top: 14px;
+        position: relative;
+
+        .up_arrow {
+            position: absolute;
+            bottom: 34px;
+            left: 10px;
+        }
+
+        .warn_input {
+            position: absolute;
+            left: 14px;
+            top: 7px;
+        }
+
+        .dismiss-warning {
+            position: absolute;
+            right: -10px;
+            top: -15px;
+        }
+    }
+
+    .pwd_info {
+        background-color: $signup-info-box;
+        border: 1px solid $signup-info-box-border;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 10px;
+
+        .text_green {
+            color: #489332;
+        }
+
+        .text-red {
+            color: $failure;
+        }
+
+        .pwd_info_heading {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .the_info {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            .icon {
+                position: relative;
+                top: -2px;
+            }
+
+            .info_tick {
+                margin-left: 9px;
+                margin-right: 6px;
+            }
+        }
+
+    }
+
+    .background_map {
+        padding: 1rem 0rem;
+        background-image: url($map);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .form_container {
+        background: $white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: $box-shadow;
+        margin-top: 15px;
+
+        h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: $purple;
+        }
+
+        label {
+            color: #273251;
+            font-weight: 500;
+        }
+
+        input {
+            margin: 3px 0px;
+            border-radius: 5px;
+        }
+
+        h6 {
+            font-size: 14px;
+            margin: 20px 0px;
+            text-align: right;
+        }
+
+        h5 {
+            font-size: $big-text;
+            margin-bottom: 35px;
+        }
+
+        span {
+            color: $danger;
+        }
+
+        input::placeholder {
+            color: $grey;
+            font-size: $text;
+
+        }
+
+    }
+
+    .pointer-hover {
+        cursor: pointer;
+    }
+
+
+
+
+    .navbar_brand img {
+        width: 300px;
+        height: 50px;
+    }
+
+    .eye_icon_container {
+        position: relative;
+
+    }
+
+    .eye_icon {
+        position: absolute;
+        color: $grey  !important;
+        right: 10px !important;
+        top: 37px;
+
+    }
+
+    .submit_form {
+        border-radius: 5px;
+        font-weight: 500;
+        cursor: pointer;
+        background-color: $orange;
+        color: $white;
+        border: none !important;
+        margin-bottom: 20px;
+        margin-top: 20px;
+
+        &:disabled {
+            color: $banner-para !important;
+            background-color: $tooltip-bg !important;
+        }
+
+        &:hover {
+            color: $white !important;
+            background-color: $home-btn !important;
+        }
+
+        &:active {
+            color: $white !important;
+            background-color: $home-btn !important;
+        }
+    }
+
+
+
+    #span {
+        width: 80px;
+        height: 20px;
+        text-align: center;
+        margin-left: 40%;
+
+    }
+
+    h5 {
+        position: relative;
+        margin-top: 30px;
+    }
+
+    h5::before {
+        content: "";
+        display: inline-block;
+        width: 110px;
+        height: 1px;
+        background: $grey;
+        left: 0;
+        top: 50%;
+        position: absolute;
+    }
+
+    .logo img {
+        margin-bottom: 10px;
+    }
+
+    h5::after {
+        content: "";
+        display: inline-block;
+        width: 110px;
+        height: 1px;
+        background: $grey;
+        right: 0;
+        top: 50%;
+        position: absolute;
+
+    }
+
+    .form_group {
+        margin-bottom: 10px;
+    }
+
+    label {
+        margin-bottom: 5px;
+        color: $black;
+        font-size: $big-text;
+    }
+
+    .font-small {
+        font-size: $small-text;
+        margin: 0;
+    }
+
+    #log-in {
+        text-decoration: none;
+        color: $grey;
+        cursor: pointer;
+
+        span {
+            color: $purple;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+    }
+
+
+    .google-auth a {
+        -webkit-appearance: none;
+        border: 1px solid $grey;
+        padding: 8px 29px;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        font-size: $normal-text+2px;
+        font-weight: 400;
+        color: $black;
+    }
+
+    .google-auth a img {
+        padding-right: 10px;
+        height: 25px;
+    }
+
+    .coinbase-auth a {
+        -webkit-appearance: none;
+        border: 1px solid $grey;
+        padding: 8px 29px;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        font-size: $normal-text+2px;
+        font-weight: 400 !important;
+        color: $black;
+    }
+
+    .coinbase-auth a img {
+        padding-right: 10px;
+        height: 25px !important;
+    }
+
+    @media(max-width:1400px) {
+        .google-auth a {
+            -webkit-appearance: none;
+            padding: 6px 15px;
+        }
+
+        .coinbase-auth a {
+            -webkit-appearance: none;
+            padding: 6px 15px;
+        }
+    }
+
+    @media(max-width:1200px) {
+        h5::after {
+            width: 70px !important;
+        }
+
+        h5::before {
+            width: 70px !important;
+        }
+
+    }
+
+    @media(max-width:992px) {
+        h5::after {
+            width: 120px !important;
+        }
+
+        h5::before {
+            width: 120px !important;
+        }
+
+    }
+
+    @media(max-width:768px) {
+        .navbar_brand img {
+            width: 240px;
+            height: 40px;
+        }
+
+        h5::after {
+            width: 80px !important;
+        }
+
+        h5::before {
+            width: 80px !important;
+        }
+
+    }
+
+    @media(max-width:500px) {
+        .show_icon {
+            display: none;
+        }
+
+        .hide_icon {
+            display: block;
+        }
+
+        h5::after {
+            width: 40px;
+        }
+
+        h5::before {
+            width: 40px;
+        }
+    }
+
+    @media(max-width:425px) {
+        h5::after {
+            width: 50px !important;
+        }
+
+        h5::before {
+            width: 50px !important;
+        }
+
+        .coinbase-auth a {
+            -webkit-appearance: none;
+            padding: 4px 2px;
+
+        }
+
+        .google-auth a {
+            -webkit-appearance: none;
+            padding: 4px 2px;
+        }
+    }
+}

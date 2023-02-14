@@ -1,0 +1,2284 @@
+@import "../shared/common.module";
+.allAccountsDetails {
+    .top_accounts {
+        .top_accounts_subhead {
+            position: relative;
+            border-radius: 13px;
+            margin-left: 12px;
+
+            .top_account_heading_btn {
+                position: absolute;
+                border: none;
+                background-color: white;
+                margin-top: -16px;
+                transform: translateX(-50%);
+
+                .top_account_heading {
+                    color: $purple;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+
+            .top_account_heading_btn_2 {
+                position: absolute;
+                border: none;
+                background-color: white;
+                margin-top: -16px;
+                left: 40%;
+
+                .top_account_heading {
+                    color: $purple;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+
+
+            .account_mobile {
+                display: none;
+            }
+
+            .account_tab {
+                display: none;
+            }
+
+            .account_desktop {
+                .background_accounts {
+                    height: 280px;
+                    width: 280px;
+                    background: linear-gradient(137.68deg, #FFDBA9 8.8%, #DE937E 92%);
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(18deg);
+                    right: -12rem;
+                    border-radius: 25px;
+
+                    .pulse {
+                        animation: pulse_animation 1s infinite;
+                    }
+
+                    @keyframes pulse_animation {
+                        0% {
+                            box-shadow: 0 0 0 0px rgba(1, 19, 10, 0.2);
+                        }
+
+                        100% {
+                            box-shadow: 0 0 0 20px rgba(31, 45, 3, 0);
+                        }
+                    }
+
+                    .image_inside_accounts {
+                        position: absolute;
+                        top: 2rem;
+                        right: 9rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-color:$white;
+                    }
+
+                    .image_inside_accounts_2 {
+                        position: absolute;
+                        bottom: 2rem;
+                        right: 5.5rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-color:$white;
+                    }
+
+                    .image_inside_accounts_second {
+                        position: absolute;
+                        bottom: 3rem;
+                        left: 4rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-color:$white;
+                    }
+
+                    .image_inside_accounts_third {
+                        position: absolute;
+                        bottom: 6rem;
+                        right: 1.8rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        cursor: pointer;
+                        border-radius: 50%;
+                        background-color:$white;
+                    }
+
+                    .image_inside_accounts_sec {
+                        position: absolute;
+                        bottom: 5.5rem;
+                        left: 2rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-color:$white;
+                    }
+
+                    .image_inside_accounts_th {
+                        position: absolute;
+                        top: 6.5rem;
+                        right: 1.5rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-color:$white;
+                    }
+
+
+                    .image_inside_accounts_forth {
+                        position: absolute;
+                        bottom: 2rem;
+                        right: 5.5rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-color:$white;
+                    }
+
+                    .image_inside_accounts_4 {
+                        position: absolute;
+                        top: 3.5rem;
+                        right: 3.5rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-color:$white;
+                    }
+
+                    .image_inside_accounts_5 {
+                        position: absolute;
+                        top: 6.5rem;
+                        left: 2rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-color:$white;
+                    }
+
+                    .background_double_inside_accounts {
+                        height: 190px;
+                        width: 190px;
+                        border: 2px solid white;
+                        position: absolute;
+                        top: 3rem;
+                        left: 3rem;
+                        border-radius: 50%;
+                    }
+
+                    .background_inside_accounts {
+                        height: 200px;
+                        width: 200px;
+                        border: 2px solid white;
+                        position: absolute;
+                        top: 2.7rem;
+                        left: 2.7rem;
+                        border-radius: 50%;
+
+                        .inside_account_name {
+                            color: $white;
+                            position: absolute;
+                            transform: rotate(-18deg);
+                            left: 5.5rem;
+                            top: 4.4rem;
+                            font-size: 26px;
+                            font-weight: 700;
+                        }
+
+                        .inside_account_total {
+                            color: $white;
+                            position: absolute;
+                            transform: rotate(-18deg);
+                            left: 3.2rem;
+                            bottom: 1.8rem;
+                            font-size: 18px;
+                            font-weight: 700;
+                        }
+
+                        .image_home_inside {
+                            left: 3.5rem;
+                            bottom: 4.6rem;
+                            position: absolute;
+                            transform: rotate(-17deg);
+                        }
+                    }
+                }
+
+            }
+
+            .account_allocation {
+                border: 1px solid $border;
+                border-radius: 13px;
+                margin-bottom: 20px;
+                overflow-x: hidden;
+                margin-left: 1rem;
+
+                .top_account_heading_btn {
+                    position: absolute;
+                    border: none;
+                    background-color: white;
+                    margin-top: -17px;
+                    left: 40%;
+
+                    .top_account_heading {
+                        color: $purple;
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+                }
+
+                .top_account_heading_btn_2 {
+                    position: absolute;
+                    border: none;
+                    background-color: white;
+                    margin-top: -17px;
+                    left: 35%;
+
+                    .top_account_heading {
+                        color: $purple;
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+                }
+
+                .para_inside {
+                    .portfolio_allocation {
+                        line-height: 0.5;
+
+                        .allocation_para {
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #F4A047;
+                        }
+
+                        .allocation_amount {
+                            font-size: 18px;
+                            color: $purple;
+                        }
+                    }
+                }
+            }
+
+            .btn_div {
+                padding-left: 12px;
+                margin-bottom: 20px;
+
+                .add_account_btn {
+                    color: $white;
+                    background-color: $orange;
+                    border-radius: 10px;
+                    border: none;
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+
+                .all_account_btn {
+                    color: $orange;
+                    background-color: $white;
+                    border-radius: 10px;
+                    border: 1px solid $orange;
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
+
+        }
+        .top_transaction_heading_btn {
+            position: absolute;
+            border: none;
+            background-color: white;
+            margin-top: -16px;
+            transform: translateX(-50%);
+
+            .top_transaction_heading {
+                color: $purple;
+                font-size: 24px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .top_assets {
+        padding-right: 3rem;
+
+        .top_accounts_subhead {
+            position: relative;
+            border-radius: 13px;
+            margin-left: 12px;
+            margin-left: auto;
+
+            .top_assets_heading_btn {
+                position: absolute;
+                border: none;
+                background-color: white;
+                margin-top: -18px;
+                right: 35%;
+
+                .top_assets_heading {
+                    color: $purple;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+
+            .background_accounts {
+                height: 280px;
+                width: 280px;
+                background: linear-gradient(137.68deg, #FFDBA9 8.8%, #DE937E 92%);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) rotate(18deg);
+                left: -14rem;
+                border-radius: 25px;
+
+                .pulse {
+                    animation: pulse_animation 1s infinite;
+                }
+
+                @keyframes pulse_animation {
+                    0% {
+                        box-shadow: 0 0 0 0px rgba(1, 19, 10, 0.2);
+                    }
+
+                    100% {
+                        box-shadow: 0 0 0 20px rgba(31, 45, 3, 0);
+                    }
+                }
+
+                .image_inside_accounts {
+                    position: absolute;
+                    top: 2rem;
+                    right: 9rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(-32deg);
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_2 {
+                    position: absolute;
+                    bottom: 2rem;
+                    right: 5.5rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(-21deg);
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_second {
+                    position: absolute;
+                    bottom: 3rem;
+                    left: 4rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(-21deg);
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_third {
+                    position: absolute;
+                    bottom: 6rem;
+                    right: 1.8rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(0deg);
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_sec {
+                    position: absolute;
+                    bottom: 5.5rem;
+                    left: 2rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(-21deg);
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_th {
+                    position: absolute;
+                    top: 6.5rem;
+                    right: 1.5rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(-21deg);
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_forth {
+                    position: absolute;
+                    bottom: 2rem;
+                    right: 5.5rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(-21deg);
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_4 {
+                    position: absolute;
+                    top: 3.5rem;
+                    right: 3.5rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(-18deg);
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_5 {
+                    position: absolute;
+                    top: 6.5rem;
+                    left: 2rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(-19deg);
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .background_double_inside_accounts {
+                    height: 190px;
+                    width: 190px;
+                    border: 2px solid white;
+                    position: absolute;
+                    top: 3rem;
+                    left: 3rem;
+                    border-radius: 50%;
+                }
+
+                .background_inside_accounts {
+                    height: 200px;
+                    width: 200px;
+                    border: 2px solid white;
+                    position: absolute;
+                    top: 2.7rem;
+                    left: 2.7rem;
+                    border-radius: 50%;
+
+                    .inside_account_name {
+                        color: $white;
+                        position: absolute;
+                        transform: rotate(-18deg);
+                        left: 5.5rem;
+                        top: 4.4rem;
+                        font-size: 26px;
+                        font-weight: 700;
+                    }
+
+                    .inside_account_total {
+                        color: $white;
+                        position: absolute;
+                        transform: rotate(-18deg);
+                        left: 3.2rem;
+                        bottom: 3rem;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .account_allocation {
+                margin-left: auto;
+                border: 1px solid $border;
+                border-radius: 13px;
+                margin-bottom: 20px;
+                overflow-x: hidden;
+
+                .assets_tab {
+                    display: none;
+                }
+
+                .top_account_heading_btn {
+                    position: absolute;
+                    border: none;
+                    background-color: white;
+                    margin-top: -17px;
+                    left: 40%;
+
+                    .top_account_heading {
+                        color: $purple;
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+                }
+
+                .top_account_heading_btn_2 {
+                    position: absolute;
+                    border: none;
+                    background-color: white;
+                    margin-top: -17px;
+                    left: 40%;
+
+                    .top_account_heading {
+                        color: $purple;
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+                }
+
+                .para_inside {
+                    .portfolio_allocation {
+                        line-height: 0.5;
+
+                        .allocation_para {
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #F4A047;
+                        }
+
+                        .allocation_amount {
+                            font-size: 18px;
+                            color: $purple;
+                        }
+                    }
+                }
+            }
+
+            .btn_div {
+                padding-left: 12px;
+                margin-bottom: 20px;
+
+                .add_account_btn {
+                    color: $white;
+                    background-color: $orange;
+                    border-radius: 10px;
+                    border: none;
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+
+                .all_account_btn {
+                    color: $orange;
+                    background-color: $white;
+                    border-radius: 10px;
+                    border: 1px solid $orange;
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
+        }
+        .top_transaction_heading_btn {
+            position: absolute;
+            border: none;
+            background-color: white;
+            margin-top: -16px;
+            transform: translateX(-50%);
+
+            .top_transaction_heading {
+                color: $purple;
+                font-size: 24px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .total_transactions {
+        padding-left: 1.5rem !important;
+
+        .top_accounts_subhead {
+            position: relative;
+            border-radius: 13px;
+
+            .transaction_row {
+                margin-left: 1.5rem;
+
+                .transaction_btn {
+                    margin-bottom: 30px;
+
+                    .add_transaction_btn {
+                        color: #FFFFFF;
+                        background-color: #FB9C1A;
+                        border-radius: 10px;
+                        border: none;
+                        font-size: 16px;
+                        font-weight: 700;
+                        height: auto;
+
+                    }
+
+                    .transaction_amount_head {
+                        line-height: 0.9;
+                        color: #504080;
+                        font-size: 16px;
+                        font-weight: 600;
+
+                        span {
+                            color: #FB9C1A;
+                            font-size: 24px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            .top_transaction_heading_btn {
+                position: absolute;
+                border: none;
+                background-color: white;
+                margin-top: -16px;
+                transform: translateX(-50%);
+
+                .top_transaction_heading {
+                    color: $purple;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+
+            .account_mobile {
+                display: none;
+            }
+
+            .transaction_tab {
+                display: none;
+            }
+
+            .background_accounts {
+                height: 280px;
+                width: 280px;
+                background: linear-gradient(137.68deg, #FFDBA9 8.8%, #DE937E 92%);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) rotate(18deg);
+                right: -11rem;
+                border-radius: 25px;
+
+                .default_coin_name {
+                    position: absolute;
+                    color: $white;
+                    font-size: 20px;
+                    bottom: 3rem;
+                    right: 6rem;
+                    font-weight: 600;
+                    transform: rotate(-17deg);
+                }
+
+                .coin_value_trade {
+                    position: absolute;
+                    color: $white;
+                    font-size: 22px;
+                    bottom: 2.9rem;
+                    left: 4rem;
+                    font-weight: 600;
+                    transform: rotate(-17deg);
+                }
+
+                .coin_value_trade_1 {
+                    position: absolute;
+                    color: $white;
+                    font-size: 22px;
+                    bottom: 5.6rem;
+                    right: 3rem;
+                    font-weight: 600;
+                    transform: rotate(-17deg);
+                }
+
+                .image_inside_accounts {
+                    position: absolute;
+                    top: 8rem;
+                    left: 8rem;
+                    z-index: 2;
+                    height: 40px;
+                    width: 40px;
+                }
+
+                .image_inside_box {
+                    position: absolute;
+                    bottom: 6rem;
+                    right: 1rem;
+                    z-index: 1;
+                    transform: rotate(-18deg);
+                }
+
+                .image_arrow_down {
+                    position: absolute;
+                    top: 2.5rem;
+                    right: 6rem;
+                    transform: rotate((-17deg));
+                }
+
+                .image_arrow_down_1 {
+                    position: absolute;
+                    top: 4.5rem;
+                    left: 4rem;
+                    transform: rotate((-17deg));
+                }
+
+                .image_arrow_up {
+                    position: absolute;
+                    top: 2.5rem;
+                    right: 6rem;
+                    transform: rotate((162deg));
+                }
+
+                .image_arrow_up_1 {
+                    position: absolute;
+                    top: 4.5rem;
+                    left: 4rem;
+                    transform: rotate((162deg));
+                }
+
+                .image_inside_trade {
+                    position: absolute;
+                    bottom: 6.1rem;
+                    left: 3rem;
+                    height: 40px;
+                    width: 40px;
+                    transform: rotate((-17deg));
+                }
+
+                .image_inside_trade_1 {
+                    position: absolute;
+                    bottom: 9rem;
+                    right: 3rem;
+                    height: 40px;
+                    width: 40px;
+                    transform: rotate((-17deg));
+                }
+
+                .image_arrow_right {
+                    position: absolute;
+                    bottom: 8rem;
+                    left: 6.6rem;
+                    transform: rotate((-19deg));
+                }
+
+            }
+
+            .transaction_list {
+                border: 1px solid $border;
+                min-height: 300px;
+                border-radius: 16px;
+            
+                .transaction_map {
+                    cursor: pointer;
+                    border-bottom: 1px solid $border;
+                    line-height: 0.7;
+                    padding-top: 10px;
+            
+                    .color_change {
+                        border: 1px solid $border;
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 8px;
+            
+                        .category_color {
+                            color: $white;
+                            font-size: 24px;
+                            font-weight: 600;
+                        }
+                    }
+            
+                    .color_green {
+                        background-color: #40BAA0;
+                    }
+            
+                    .color_orange {
+                        background-color: $orange;
+                    }
+            
+                    .color_red_type {
+                        background-color: #C25358;
+                    }
+            
+                    .color_other {
+                        background-color: $purple;
+                    }
+            
+                    .transaction_category {
+                        margin-top: 3px;
+            
+                        .color_green_1 {
+                            color: #40BAA0;
+                        }
+            
+                        .color_red {
+                            color: #C25358;
+                        }
+            
+                        .main_category {
+                            font-size: 16px;
+                            font-weight: 600;
+                            margin-bottom: 8px;
+                        }
+            
+                        .date_syntax {
+                            font-size: 12px;
+                            color: $middle-grey;
+            
+                            .color_green_1 {
+                                font-size: 13px;
+                                color: #40BAA0;
+                            }
+
+                            .color_red {
+                                font-size: 13px;
+                                color: #C25358 !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .transaction_map:hover {
+                background-color: #F6F3FF;
+            }
+            
+        }
+    }
+}
+
+@media (max-width:1199px) and (min-width:993px) {
+    .allAccountsDetails {
+        .top_accounts {
+            padding-left: 0px !important;
+        
+            .top_accounts_subhead {
+                margin: auto;
+            }
+        
+            .account_desktop {
+                display: none;
+            }
+        
+            .account_allocation {
+                min-height: 300px;
+        
+                .account_tab {
+                    display: block !important;
+        
+                    .background_accounts {
+                        height: 230px;
+                        width: 230px;
+                        background: linear-gradient(137.68deg, #FFDBA9 8.8%, #DE937E 92%);
+                        right: 0;
+                        border-radius: 25px;
+                        position: relative !important;
+                        transform: rotate(18deg);
+                        margin: auto;
+                        margin-top: 1.8rem;
+                    }
+        
+                    .pulse {
+                        animation: pulse_animation 1s infinite;
+                    }
+        
+                    @keyframes pulse_animation {
+                        0% {
+                            box-shadow: 0 0 0 0px rgba(1, 19, 10, 0.2);
+                        }
+        
+                        100% {
+                            box-shadow: 0 0 0 20px rgba(31, 45, 3, 0);
+                        }
+                    }
+        
+                    .image_inside_accounts {
+                        position: absolute;
+                        top: 1rem;
+                        right: 7.4rem;
+                        z-index: 1;
+                        height: 35px;        
+                        width: 35px;
+                        border-radius: 50%;
+                        background-color:$white;
+                    }
+
+                    .image_inside_accounts_2 {
+                        position: absolute;
+                        bottom: 1.2rem;
+                        right: 4.3rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        background-color:$white;
+                    }
+                    
+                    .image_inside_accounts_second {
+                        position: absolute;
+                        bottom: 2rem;
+                        left: 2.5rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        background-color:$white;
+                    }
+                    
+                    .image_inside_accounts_third {
+                        position: absolute;
+                        bottom: 5rem;
+                        right: 0.5rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        background-color:$white;
+                    }
+                    
+                    .image_inside_accounts_sec {
+                        position: absolute;
+                        bottom: 4.5rem;
+                        left: 1rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        background-color:$white;
+                    }
+                    
+                    .image_inside_accounts_th {
+                        position: absolute;
+                        top: 4.5rem;
+                        right: 0.9rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        transform: rotate(-17deg);
+                        background-color:$white;
+                    }
+                    
+                    .image_inside_accounts_forth {
+                        position: absolute;
+                        bottom: 1rem;
+                        right: 4.5rem;                    
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        transform: rotate(-17deg);
+                        background-color:$white;
+                    }
+
+                    .image_inside_accounts_4 {
+                        position: absolute;
+                        top: 2.5rem;
+                        right: 2rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        background-color:$white;
+                    }
+                    .image_inside_accounts_5 {
+                        position: absolute;
+                        top: 5.5rem;
+                        left: 1rem;
+                        z-index: 1;
+                        height: 35px;
+                        width: 35px;
+                        background-color:$white;
+                    }
+                    
+                    .background_double_inside_accounts {
+                        height: 170px;
+                        width: 170px;
+                        border: 2px solid white;
+                        position: absolute;
+                        top: 2rem;
+                        left: 2rem;
+                        border-radius: 50%;
+                    }
+                    
+                    .background_inside_accounts {
+                        height: 180px;
+                        width: 180px;
+                        border: 2px solid white;
+                        position: absolute;
+                        top: 1.7rem;
+                        left: 1.7rem;
+                        border-radius: 50%;
+                    
+                        .inside_account_name {
+                            color: $white;
+                            position: absolute;
+                            transform: rotate(-18deg);
+                            left: 5rem;
+                            top: 3.8rem;
+                            font-size: 26px;
+                            font-weight: 700;
+                        }
+                    
+                        .inside_account_total {
+                            color: $white;
+                            position: absolute;
+                            transform: rotate(-18deg);
+                            left: 3.2rem;
+                            bottom: 1.8rem;
+                            font-size: 18px;                    
+                            font-weight: 700;
+                        }
+
+                        .image_home_inside {
+                            left: 3rem;
+                            bottom: 4rem;
+                            position: absolute;
+                            transform: rotate(-17deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        .top_assets {
+            .top_accounts_subhead {
+                margin: auto;
+
+                .top_assets_heading_btn {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .mobile_assets_tab {
+                display: none !important;
+            }
+
+            .account_allocation {
+                min-height: 300px;
+                margin-right: 15px !important;
+
+                .para_inside {
+                    margin-top: 10px;
+                }
+
+                .assets_tab {
+                    display: block !important;
+
+                    .background_accounts {
+                        height: 225px;
+                        width: 225px;
+                        background: linear-gradient(137.68deg, #FFDBA9 8.8%, #DE937E 92%);
+                        transform: translateY(-50%) rotate(18deg);
+                        left: 4rem;
+                        top: 48%;
+                        border-radius: 25px;
+
+                        .pulse {
+                            animation: pulse_animation 1s infinite;
+                        }
+
+                        @keyframes pulse_animation {
+                            0% {
+                                box-shadow: 0 0 0 0px rgba(1, 19, 10, 0.2);
+                            }
+
+                            100% {
+                                box-shadow: 0 0 0 20px rgba(31, 45, 3, 0);
+                            }
+                        }
+
+                        .image_inside_accounts {
+                            position: absolute;
+                            top: 1rem;
+                            left: 4.8rem;
+                            z-index: 1;
+                            height: 35px;
+                            width: 35px;
+                            transform: rotate(-32deg);
+                            cursor: pointer;
+                            background-color:$white;
+                        }
+
+                        .image_inside_accounts_2 {
+                            position: absolute;
+                            bottom: 2rem;
+                            right: 5.5rem;
+                            z-index: 1;
+                            height: 35px;
+                            width: 35px;
+                            transform: rotate(-21deg);
+                            cursor: pointer;
+                            background-color:$white;
+                        }
+
+                        .image_inside_accounts_second {
+                            position: absolute;
+                            bottom: 1.5rem;
+                            left: 3rem;
+                            z-index: 1;
+                            height: 35px;
+                            width: 35px;
+                            transform: rotate(-21deg);
+                            cursor: pointer;
+                            background-color:$white;
+                        }
+
+                        .image_inside_accounts_third {
+                            position: absolute;
+                            bottom: 4.3rem;
+                            right: 0.9rem;
+                            z-index: 1;
+                            height: 35px;
+                            width: 35px;
+                            transform: rotate(0deg);
+                            cursor: pointer;
+                            background-color:$white;
+                        }
+
+                        .image_inside_accounts_sec {
+                            position: absolute;
+                            bottom: 5.5rem;
+                            left: 2rem;
+                            z-index: 1;
+                            height: 35px;
+                            width: 35px;
+                            transform: rotate(-21deg);
+                            cursor: pointer;
+                            background-color:$white;
+                        }
+
+                        .image_inside_accounts_th {
+                            position: absolute;
+                            top: 6.5rem;
+                            right: 1.5rem;
+                            z-index: 1;
+                            height: 35px;
+                            width: 35px;
+                            transform: rotate(-21deg);
+                            cursor: pointer;
+                            background-color:$white;
+                        }
+
+                        .image_inside_accounts_forth {
+                            position: absolute;
+                            bottom: 2rem;
+                            right: 5.5rem;
+                            z-index: 1;
+                            height: 35px;
+                            width: 35px;
+                            transform: rotate(-21deg);
+                            cursor: pointer;
+                            background-color:$white;
+                        }
+
+                        .image_inside_accounts_4 {
+                            position: absolute;
+                            top: 3rem;
+                            right: 1.4rem;
+                            z-index: 1;
+                            height: 35px;
+                            width: 35px;
+                            transform: rotate(-18deg);
+                            cursor: pointer;
+                            background-color:$white;
+                        }
+
+                        .image_inside_accounts_5 {
+                            position: absolute;
+                            top: 6.5rem;
+                            left: 0.8rem;
+                            z-index: 1;
+                            height: 35px;
+                            width: 35px;
+                            transform: rotate(-19deg);
+                            cursor: pointer;
+                            background-color:$white;
+                        }
+
+                        .background_double_inside_accounts {
+                            height: 170px;
+                            width: 170px;
+                            border: 2px solid white;
+                            position: absolute;
+                            top: 2rem;
+                            left: 2rem;
+                            border-radius: 50%;
+                        }
+
+                        .background_inside_accounts {
+                            height: 180px;
+                            width: 180px;
+                            border: 2px solid white;
+                            position: absolute;
+                            top: 1.7rem;
+                            left: 1.7rem;
+                            border-radius: 50%;
+
+                            .inside_account_name {
+                                color: $white;
+                                position: absolute;
+                                transform: rotate(-18deg);
+                                left: 4.5rem;
+                                top: 3.5rem;
+                                font-size: 26px;
+                                font-weight: 700;
+                            }
+
+                            .inside_account_total {
+                                color: $white;
+                                position: absolute;
+                                transform: rotate(-18deg);
+                                left: 2.8rem;
+                                bottom: 3.2rem;
+                                font-size: 18px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .total_transactions {
+            padding-left: 0px !important;
+
+            .top_accounts_subhead {
+                margin: auto;
+
+                .account_desktop {
+                    display: none !important;
+                }
+
+                .transaction_tab {
+                    display: block !important;
+                }
+
+                .transaction_row {
+                    .transaction_btn {
+                        margin-top: 3rem;
+                    }
+                }
+
+                .background_transactions {
+                    margin-bottom: 40px;
+                    margin-top: 10px;
+                    height: 230px;
+                    width: 230px;
+                    background: linear-gradient(137.68deg, #FFDBA9 8.8%, #DE937E 92%);
+                    transform: rotate(18deg);
+                    border-radius: 25px;
+
+                    .default_coin_name {
+                        position: absolute;
+                        color: $white;
+                        font-size: 20px;
+                        bottom: 3rem;
+                        right: 6.5rem;
+                        font-weight: 600;
+                        transform: rotate(-18deg);
+                    }
+
+                    .image_inside_accounts {
+                        position: absolute;
+                        top: 3.8rem;
+                        left: 4.3rem;
+                        z-index: 2;
+                        height: 40px;
+                        width: 40px;
+                    }
+
+                    .coin_value_trade {
+                        position: absolute;
+                        color: $white;
+                        font-size: 22px;
+                        bottom: 1.9rem;
+                        left: 3rem;
+                        font-weight: 600;
+                        transform: rotate(-17deg);
+                    }
+
+                    .coin_value_trade_1 {
+                        position: absolute;
+                        color: $white;
+                        font-size: 22px;
+                        bottom: 3.9rem;
+                        right: 2.8rem;
+                        font-weight: 600;
+                        transform: rotate(-17deg);
+                    }
+
+                    .image_inside_box {
+                        position: absolute;
+                        bottom: 6rem;
+                        right: 1rem;
+                        z-index: 1;
+                        transform: rotate(-18deg);
+                    }
+
+                    .image_arrow_down {
+                        position: absolute;
+                        top: 2.5rem;
+                        right: 6rem;
+                        transform: rotate((-17deg));
+                    }
+
+                    .image_arrow_down_1 {
+                        position: absolute;
+                        top: 4.5rem;
+                        left: 4rem;
+                        transform: rotate((-17deg));
+                    }
+
+                    .image_arrow_up {
+                        position: absolute;
+                        top: 2.5rem;
+                        right: 6rem;
+                        transform: rotate((162deg));
+                    }
+
+                    .image_arrow_up_1 {
+                        position: absolute;
+                        top: 3.6rem;
+                        left: 3rem;
+                        transform: rotate((162deg));
+                    }
+
+                    .image_inside_trade {
+                        position: absolute;
+                        bottom: 5rem;
+                        left: 2.5rem;
+                        height: 40px;
+                        width: 40px;
+                        transform: rotate((-17deg));
+                    }
+
+                    .image_inside_trade_1 {
+                        position: absolute;
+                        bottom: 7.3rem;
+                        right: 2.6rem;
+                        height: 40px;
+                        width: 40px;
+                        transform: rotate((-17deg));
+                    }
+
+                    .image_arrow_right {
+                        position: absolute;
+                        bottom: 6.8rem;
+                        left: 5rem;
+                        transform: rotate((-19deg));
+                    }
+
+                    .image_arrow_down {
+                        position: absolute;
+                        top: 0.8rem;
+                        right: 6rem;
+                        transform: rotate((-17deg));
+                    }
+
+                    .image_arrow_down_1 {
+                        position: absolute;
+                        top: 2.5rem;
+                        left: 2rem;
+                        transform: rotate((-17deg));
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .allAccountsDetails {
+        .top_accounts {
+            padding: 0px !important;
+
+            .top_accounts_subhead {
+                margin-left: 0px;
+            }
+
+            .account_desktop {
+                display: none;
+            }
+
+            .account_mobile {
+                display: block !important;
+                .background_accounts {
+                    height: 280px;
+                    width: 280px;
+                    background: linear-gradient(137.68deg, #FFDBA9 8.8%, #DE937E 92%);
+                    right: 0;
+                    border-radius: 25px;
+                    position: relative !important;
+                    transform: rotate(18deg);
+                    margin: auto;
+                    margin-left: 12rem;
+                    margin-top: 2.5rem;
+                    margin-bottom: 1rem;
+                }
+                .pulse {
+                    animation: pulse_animation 1s infinite;
+                }
+
+                @keyframes pulse_animation {
+                    0% {
+                        box-shadow: 0 0 0 0px rgba(1, 19, 10, 0.2);
+                    }
+
+                    100% {
+                        box-shadow: 0 0 0 20px rgba(31, 45, 3, 0);
+                    }
+                }
+
+                .image_inside_accounts {
+                    position: absolute;
+                    top: 2rem;
+                    right: 9rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_2 {
+                    position: absolute;
+                    bottom: 2rem;
+                    right: 5.5rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_second {
+                    position: absolute;
+                    bottom: 3rem;
+                    left: 4rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_third {
+                    position: absolute;
+                    bottom: 6rem;
+                    right: 1.8rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_sec {
+                    position: absolute;
+                    bottom: 5.5rem;
+                    left: 2rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_th {
+                    position: absolute;
+                    top: 6.5rem;
+                    right: 1.5rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_forth {
+                    position: absolute;
+                    bottom: 2rem;
+                    right: 5.5rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_4 {
+                    position: absolute;
+                    top: 3.5rem;
+                    right: 3.5rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_5 {
+                    position: absolute;
+                    top: 6.5rem;
+                    left: 2rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .background_double_inside_accounts {
+                    height: 190px;
+                    width: 190px;
+                    border: 2px solid white;
+                    position: absolute;
+                    top: 3rem;
+                    left: 3rem;
+                    border-radius: 50%;
+                }
+
+                .background_inside_accounts {
+                    height: 200px;
+                    width: 200px;
+                    border: 2px solid white;
+                    position: absolute;
+                    top: 2.7rem;
+                    left: 2.7rem;
+                    border-radius: 50%;
+
+                    .inside_account_name {
+                        color: $white;
+                        position: absolute;
+                        transform: rotate(-18deg);
+                        left: 5.5rem;
+                        top: 4.4rem;
+                        font-size: 26px;
+                        font-weight: 700;
+                    }
+
+                    .inside_account_total {
+                        color: $white;
+                        position: absolute;
+                        transform: rotate(-18deg);
+                        left: 3.2rem;
+                        bottom: 1.8rem;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+
+                    .image_home_inside {
+                        left: 3.5rem;
+                        bottom: 4.6rem;
+                        position: absolute;
+                        transform: rotate(-17deg);
+                    }
+                }
+            }
+
+            .account_allocation {
+                margin-right: auto !important;
+                margin-left: auto !important;
+                .top_account_heading_btn_2{
+                    transform: translateX(-50%);
+                    left: inherit !important;
+                }
+            }
+        }
+
+        .top_assets {
+            padding-right: 0px;
+
+            .top_accounts_subhead {
+                .top_assets_heading_btn {
+                    right: 40%;
+                }
+            }
+
+            .background_accounts {
+                position: relative !important;
+                left: 0 !important;
+                right: 0 !important;
+                margin: auto;
+                margin-left: 11rem !important;
+                transform: translateY(-50%) rotate(18deg) !important;
+                margin-top: 1rem;
+                margin-bottom: 30px;
+
+                .pulse {
+                    animation: pulse_animation 1s infinite;
+                }
+
+                @keyframes pulse_animation {
+                    0% {
+                        box-shadow: 0 0 0 0px rgba(1, 19, 10, 0.2);
+                    }
+
+                    100% {
+                        box-shadow: 0 0 0 20px rgba(31, 45, 3, 0);
+                    }
+                }
+            }
+
+            .account_allocation {
+                margin-right: auto !important;
+
+                .mobile_assets_tab {
+                    display: block !important;
+                }
+
+                .assets_tab {
+                    display: none;
+                }
+            }
+        }
+
+        .total_transactions {
+            padding-left: 0px !important;
+
+            .transaction_row {
+                .transaction_btn {
+                    margin: 0 auto;
+                }
+            }
+
+            .top_accounts_subhead {
+                padding-left: 0px !important;
+                .transaction_list {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .account_desktop {
+                    display: none !important;
+                }
+
+                .account_mobile {
+                    display: block !important;
+                }
+
+                .background_accounts {
+                    height: 280px;
+                    width: 280px;
+                    background: linear-gradient(137.68deg, #FFDBA9 8.8%, #DE937E 92%);
+                    right: 0;
+                    border-radius: 25px;
+                    position: relative !important;
+                    transform: rotate(18deg);
+                    margin: auto;
+                    margin-left: 11rem;
+                    margin-top: 10px;
+                    margin-bottom: 2rem;
+
+                    .image_inside_accounts {
+                        position: absolute;
+                        top: 8rem;
+                        left: 8rem;
+                        z-index: 2;
+                        height: 40px;
+                        width: 40px;
+                    }
+
+                    .image_inside_box {
+                        position: absolute;
+                        bottom: 6rem;
+                        right: 1rem;
+                        z-index: 1;
+                        transform: rotate(-18deg);
+                    }
+
+                    .image_arrow_down {
+                        position: absolute;
+                        top: 2.5rem;
+                        right: 6rem;
+                        transform: rotate((-17deg));
+                    }
+
+                    .image_arrow_down_1 {
+                        position: absolute;
+                        top: 4.5rem;
+                        left: 4rem;
+                        transform: rotate((-17deg));
+                    }
+
+                    .image_arrow_up {
+                        position: absolute;
+                        top: 2.5rem;
+                        right: 6rem;
+                        transform: rotate((162deg));
+                    }
+
+                    .default_coin_name {
+                        position: absolute;
+                        color: $white;
+                        font-size: 20px;
+                        bottom: 3rem;
+                    }
+
+                    .image_arrow_up_1 {
+                        position: absolute;
+                        top: 4.5rem;
+                        left: 4rem;
+                        transform: rotate((162deg));
+                    }
+
+                    .image_inside_trade {
+                        position: absolute;
+                        bottom: 6.1rem;
+                        left: 3rem;
+                        height: 40px;
+                        width: 40px;
+                        transform: rotate((-17deg));
+                    }
+
+                    .image_inside_trade_1 {
+                        position: absolute;
+                        bottom: 9rem;
+                        right: 3rem;
+                        height: 40px;
+                        width: 40px;
+                        transform: rotate((-17deg));
+                    }
+
+                    .image_arrow_right {
+                        position: absolute;
+                        bottom: 8rem;
+                        left: 6.6rem;
+                        transform: rotate((-19deg));
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .allAccountsDetails {
+        .top_accounts {
+            padding-left: 0px !important;
+
+            .account_mobile {
+                .background_accounts {
+                    height: 280px;
+                    width: 280px;
+                    right: 0;
+                    transform: rotate(0deg);
+                    margin: auto;
+                    margin-top: 2.5rem;
+                    margin-bottom: 1rem;
+                }
+
+                .image_inside_accounts {
+                    position: absolute;
+                    top: 2rem;
+                    right: 7.4rem;
+                    z-index: 1;
+                    transform: rotate(0deg);
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_2 {
+                    position: absolute;
+                    bottom: 1.8rem;
+                    right: 7.2rem;
+                    z-index: 1;
+                    height: 35px;
+                    transform: rotate(0deg);
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_second {
+                    position: absolute;
+                    bottom: 3rem;
+                    left: 4rem;
+                    z-index: 1;
+                    height: 35px;
+                    transform: rotate(0deg);
+                    width: 35px;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_third {
+                    position: absolute;
+                    bottom: 4rem;
+                    right: 2.6rem;
+                    z-index: 1;
+                    transform: rotate(0deg);
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_sec {
+                    position: absolute;
+                    bottom: 5.5rem;
+                    left: 2rem;
+                    z-index: 1;
+                    transform: rotate(0deg);
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_th {
+                    position: absolute;
+                    top: 6.5rem;
+                    right: 1.5rem;
+                    z-index: 1;
+                    transform: rotate(0deg);
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_forth {
+                    position: absolute;
+                    bottom: 2rem;
+                    right: 5.5rem;
+                    z-index: 1;
+                    transform: rotate(0deg);
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_4 {
+                    position: absolute;
+                    top: 5.5rem;
+                    right: 2.2rem;
+                    z-index: 1;
+                    transform: rotate(0deg);
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_5 {
+                    position: absolute;
+                    top: 6.5rem;
+                    left: 2rem;
+                    z-index: 1;
+                    transform: rotate(0deg);
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .background_double_inside_accounts {
+                    height: 190px;
+                    width: 190px;
+                    border: 2px solid white;
+                    position: absolute;
+                    top: 3rem;
+                    left: 3rem;
+                    border-radius: 50%;
+                }
+
+                .background_inside_accounts {
+                    height: 200px;
+                    width: 200px;
+                    border: 2px solid white;
+                    position: absolute;
+                    top: 2.7rem;
+                    left: 2.7rem;
+                    border-radius: 50%;
+
+                    .inside_account_name {
+                        color: $white;
+                        position: absolute;
+                        transform: rotate(0deg);
+                        left: 5.5rem;
+                        top: 4.4rem;
+                        font-size: 26px;
+                        font-weight: 700;
+                    }
+
+                    .inside_account_total {
+                        color: $white;
+                        position: absolute;
+                        transform: rotate(0deg);
+                        left: 3.2rem;
+                        bottom: 1.8rem;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+
+                    .image_home_inside {
+                        left: 3.5rem;
+                        bottom: 4.6rem;
+                        position: absolute;
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+            .account_allocation {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+
+        .top_assets {
+            .top_accounts_subhead {
+                .top_assets_heading_btn {
+                    right: inherit;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .background_accounts {
+                position: relative !important;
+                left: 0 !important;
+                right: 0 !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                transform: translateY(-50%) rotate(0deg) !important;
+                margin-top: 1rem;
+                margin-bottom: 30px;
+
+                .pulse {
+                    animation: pulse_animation 1s infinite;
+                }
+
+                @keyframes pulse_animation {
+                    0% {
+                        box-shadow: 0 0 0 0px rgba(1, 19, 10, 0.2);
+                    }
+
+                    100% {
+                        box-shadow: 0 0 0 20px rgba(31, 45, 3, 0);
+                    }
+                }
+
+                .image_inside_accounts {
+                    position: absolute;
+                    top: 2rem;
+                    right: 9rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(0deg) !important;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_2 {
+                    position: absolute;
+                    bottom: 2rem;
+                    right: 5.5rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(0deg) !important;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_second {
+                    position: absolute;
+                    bottom: 3rem;
+                    left: 4rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(0deg) !important;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_third {
+                    position: absolute;
+                    bottom: 6rem;
+                    right: 1.8rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(22deg) !important;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_sec {
+                    position: absolute;
+                    bottom: 5.5rem;
+                    left: 2rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(0deg) !important;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_th {
+                    position: absolute;
+                    top: 6.5rem;
+                    right: 1.5rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(0deg) !important;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_forth {
+                    position: absolute;
+                    bottom: 2rem;
+                    right: 5.5rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(0deg) !important;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_4 {
+                    position: absolute;
+                    top: 3.5rem;
+                    right: 3.5rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(0deg) !important;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .image_inside_accounts_5 {
+                    position: absolute;
+                    top: 6.5rem;
+                    left: 2rem;
+                    z-index: 1;
+                    height: 35px;
+                    width: 35px;
+                    transform: rotate(0deg) !important;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    background-color:$white;
+                }
+
+                .background_double_inside_accounts {
+                    height: 190px;
+                    width: 190px;
+                    border: 2px solid white;
+                    position: absolute;
+                    top: 3rem;
+                    left: 3rem;
+                    border-radius: 50%;
+                }
+
+                .background_inside_accounts {
+                    height: 200px;
+                    width: 200px;
+                    border: 2px solid white;
+                    position: absolute;
+                    top: 2.7rem;
+                    left: 2.7rem;
+                    border-radius: 50%;
+
+                    .inside_account_name {
+                        color: $white;
+                        position: absolute;
+                        transform: rotate(0deg) !important;
+                        left: 5.5rem;
+                        top: 4.4rem;
+                        font-size: 26px;
+                        font-weight: 700;
+                    }
+
+                    .inside_account_total {
+                        color: $white;
+                        position: absolute;
+                        transform: rotate(0deg) !important;
+                        left: 3.2rem;
+                        bottom: 3rem;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .total_transactions {
+            padding-left: 0px !important;
+
+            .top_accounts_subhead {
+                .transaction_row {
+                    margin-left: 0px !important;
+                }
+
+                .transaction_list {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .background_accounts {
+                    height: 280px;
+                    width: 280px;
+                    background: linear-gradient(137.68deg, #FFDBA9 8.8%, #DE937E 92%);
+                    right: 0;
+                    border-radius: 25px;
+                    position: relative !important;
+                    transform: rotate(0deg);
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 10px;
+                    margin-bottom: 2rem;
+
+                    .default_coin_name {
+                        position: absolute;
+                        color: $white;
+                        font-size: 20px;
+                        bottom: 3rem;
+                        right: 6.5rem;
+                        font-weight: 600;
+                        transform: rotate(0deg);
+                    }
+
+                    .coin_value_trade {
+                        position: absolute;
+                        color: $white;
+                        font-size: 22px;
+                        bottom: 3.9rem;
+                        left: 3rem;
+                        font-weight: 600;
+                        transform: rotate(0deg);
+                    }
+
+                    .coin_value_trade_1 {
+                        position: absolute;
+                        color: $white;
+                        font-size: 22px;
+                        bottom: 4rem;
+                        right: 3.9rem;
+                        font-weight: 600;
+                        transform: rotate(0deg);
+                    }
+
+                    .image_inside_accounts {
+                        position: absolute;
+                        top: 8rem;
+                        left: 8rem;
+                        z-index: 2;
+                        height: 40px;
+                        width: 40px;
+                    }
+
+                    .image_inside_box {
+                        position: absolute;
+                        bottom: 6rem;
+                        right: 1rem;
+                        z-index: 1;
+                        transform: rotate(0deg);
+                    }
+
+                    .image_arrow_down {
+                        position: absolute;
+                        top: 4.4rem;
+                        right: 5rem;
+                        transform: rotate((0deg));
+                    }
+
+                    .image_arrow_down_1 {
+                        position: absolute;
+                        top: 4.5rem;
+                        left: 6rem;
+                        transform: rotate((0deg));
+                    }
+
+                    .image_arrow_up {
+                        position: absolute;
+                        top: 4.5rem;
+                        right: 5rem;
+                        transform: rotate((179deg));
+                    }
+
+                    .image_arrow_up_1 {
+                        position: absolute;
+                        top: 4.5rem;
+                        left: 6rem;
+                        transform: rotate((179deg));
+                    }
+
+                    .image_inside_trade {
+                        position: absolute;
+                        bottom: 8rem;
+                        left: 3rem;
+                        height: 40px;
+                        width: 40px;
+                        transform: rotate((0deg));
+                    }
+
+                    .image_inside_trade_1 {
+                        position: absolute;
+                        bottom: 8.2rem;
+                        right: 3rem;
+                        height: 40px;
+                        width: 40px;
+                        transform: rotate((0deg));
+                    }
+
+                    .image_arrow_right {
+                        position: absolute;
+                        bottom: 8.5rem;
+                        left: 6.6rem;
+                        transform: rotate((-2deg));
+                    }
+
+                }
+
+                .transaction_list {
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                }
+            }
+        }
+    }
+}

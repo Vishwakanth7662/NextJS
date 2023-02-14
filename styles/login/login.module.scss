@@ -1,0 +1,376 @@
+@import "../shared/common.module";
+.signin_page {
+    .background_map {
+      padding: 6rem 0rem !important;
+      background-image: url($map);
+      background-position: center;
+      background-size: cover;
+    }
+  
+    .show_icon {
+      display: block;
+    }
+  
+    .hide_icon {
+      display: none;
+    }
+  
+    .confirm-pwd-info {
+      background-color: $signup-info-box;
+      border: 1px solid $signup-info-box-border;
+      border-radius: 5px;
+      font-size: $normal-text;
+      height: 36px;
+      padding: 4px 44px;
+      margin-top: 14px;
+      position: relative;
+  
+      .up-arrow {
+        position: absolute;
+        bottom: 34px;
+        left: 10px;
+      }
+  
+      .warn-input {
+        position: absolute;
+        left: 14px;
+        top: 7px;
+      }
+  
+      .dismiss-warning {
+        position: absolute;
+        right: -10px;
+        top: -15px;
+      }
+    }
+  
+    .pwd-info {
+      background-color: $signup-info-box;
+      border: 1px solid $signup-info-box-border;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 10px;
+  
+      .text-red {
+        color: $failure;
+      }
+  
+      .pwd-info-heading {
+        font-size: $normal-text + 1px;
+        font-weight: 600;
+      }
+  
+      .the-info {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+  
+        .icon {
+          position: relative;
+          top: -2px;
+        }
+  
+        .info-tick {
+          margin-left: 9px;
+          margin-right: 6px;
+        }
+      }
+    }
+  
+    .eye_icon_container {
+      position: relative;
+    }
+  
+    .eye_icon {
+      position: absolute;
+      color: $grey !important;
+      right: 10px !important;
+      top: 37px;
+    }
+  
+    .form_container {
+      background: $white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: $box-shadow;
+      margin-top: 15px !important;
+  
+      .alert {
+        font-size: 14px;
+        width: 100%;
+      }
+    }
+  
+    .pointer_hover {
+      cursor: pointer;
+    }
+  
+    .form_container h2 {
+      font-size: $big-subheader;
+      margin-bottom: 20px;
+    }
+  
+    .form_container input {
+      margin: 3px 0px;
+      border-radius: 5px;
+    }
+  
+    .form_container h6 {
+      font-size: $text;
+      margin: 20px 0px;
+      text-align: right;
+    }
+  
+    .navbar-brand img {
+      width: 300px;
+      height: 50px;
+    }
+  
+    .forgot_password {
+      font-size: $text;
+      color: $grey;
+      text-decoration: none;
+    }
+  
+    #pwd-section {
+      text-decoration: none;
+      color: $black;
+      letter-spacing: 1px;
+    }
+  
+    .form_container h5 {
+      font-size: $big-text;
+      margin-bottom: 35px;
+    }
+  
+    .submit_form {
+      border-radius: 5px !important;
+      font-weight: 500 !important;
+      cursor: pointer !important;
+      background-color: $orange !important;
+      color: $white;
+      margin-bottom: 20px !important;
+  
+      &:hover {
+        color: $white !important;
+        background-color: $home-btn !important;
+      }
+  
+      &:active {
+        color: $white !important;
+        background-color: $home-btn !important;
+      }
+    }
+  
+    #span {
+      width: 80px !important;
+      height: 20px !important;
+      text-align: center;
+      margin-left: 40%;
+    }
+  
+    h5 {
+      position: relative;
+      margin-top: 18px;
+    }
+  
+    h5::before {
+      content: "";
+      display: inline-block;
+      width: 110px;
+      height: 1px;
+      background: $black;
+      left: 0;
+      top: 50%;
+      position: absolute;
+    }
+  
+    .logo img {
+      margin-bottom: 10px;
+    }
+  
+    h5::after {
+      content: "";
+      display: inline-block;
+      width: 110px;
+      height: 1px;
+      background: $black;
+      right: 0;
+      top: 50%;
+      position: absolute;
+    }
+  
+    .form-group {
+      margin-bottom: 10px !important;
+    }
+  
+    label {
+      margin-bottom: 5px !important;
+      color: $black;
+      font-size: $big-text;
+    }
+  
+    #sign-in {
+      text-decoration: none !important;
+      color: $grey;
+      cursor: pointer;
+  
+      span {
+        color: $purple;
+        font-weight: 500;
+        text-decoration: underline;
+      }
+    }
+  
+    input::placeholder {
+      color: $grey;
+      font-size: $text;
+    }
+  
+    .google_auth a {
+      -webkit-appearance: none;
+      border: 1px solid $grey;
+      padding: 8px 29px;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      font-size: $normal-text + 2px;
+      font-weight: 400 !important;
+      color: $black;
+    }
+  
+    .google_auth a img {
+      padding-right: 10px;
+      height: 25px !important;
+    }
+  
+    .coinbase_auth a {
+      -webkit-appearance: none;
+      border: 1px solid $grey;
+      padding: 8px 29px;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      font-size: $big-text;
+      font-family: "Open sans";
+      font-weight: 400 !important;
+      color: $black;
+    }
+  
+    .coinbase_auth a img {
+      padding-right: 10px;
+      height: 25px !important;
+    }
+  
+    @media (max-width: 1200px) {
+      h5::after {
+        width: 70px !important;
+      }
+  
+      h5::before {
+        width: 70px !important;
+      }
+  
+      .google_auth a {
+        -webkit-appearance: none;
+        padding: 6px 8px;
+      }
+  
+      .coinbase_auth a {
+        -webkit-appearance: none;
+        padding: 6px 8px;
+      }
+    }
+  
+    @media (max-width: 992px) {
+      h5::after {
+        width: 100px !important;
+      }
+  
+      h5::before {
+        width: 100px !important;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .background_map {
+        background-image: none;
+      }
+  
+      .navbar-brand img {
+        width: 240px;
+        height: 40px;
+      }
+  
+      Icon:size {
+        width: 16px !important;
+        height: 16px !important;
+      }
+  
+      Icon {
+        width: 16px !important;
+        height: 16px !important;
+      }
+  
+      h5::after {
+        content: "";
+        display: inline-block;
+        width: 120px;
+        height: 1px;
+        background: $black;
+        right: 0;
+        top: 50%;
+        position: absolute;
+      }
+  
+      h5::before {
+        content: "";
+        display: inline-block;
+        width: 120px;
+        height: 1px;
+        background: $black;
+        right: 0;
+        top: 50%;
+        position: absolute;
+      }
+    }
+  
+    @media (max-width: 500px) {
+      .show_icon {
+        display: none;
+      }
+  
+      .hide_icon {
+        display: block;
+      }
+  
+      h5::after {
+        width: 80px !important;
+      }
+  
+      h5::before {
+        width: 80px !important;
+      }
+    }
+  
+    @media (max-width: 400px) {
+      h5::after {
+        width: 50px !important;
+      }
+  
+      h5::before {
+        width: 50px !important;
+      }
+  
+      .coinbase_auth a {
+        -webkit-appearance: none;
+        padding: 4px 4px;
+      }
+  
+      .google_auth a {
+        -webkit-appearance: none;
+        padding: 4px 4px;
+      }
+    }
+  }
+  

@@ -1,0 +1,576 @@
+@import "../shared/common.module";
+$border-width: 1px solid $light-grey;
+
+.import {
+    .text_purple {
+        color: $purple;
+        text-decoration: underline !important;
+        font-size: $header;
+        font-weight: 600
+    }
+
+    .main_contain {
+        border-bottom: 1px solid $border;
+        background-image: $map;
+
+        .mobile_view {
+            display: none;
+        }
+
+        .desk_view {
+            display: block;
+        }
+        .info_hover{
+            color: $black;
+            border: none !important;
+            background-color: transparent !important;
+        }
+
+        .content_api_label {
+            font-size: $big-text;
+
+            .user_portfolio_info_icon {
+                margin-bottom:4px;
+                cursor: pointer;
+            }
+        }
+
+        .description {
+            .description_head {
+                font-size: $header;
+                color: $purple;
+                font-weight: 600;
+            }
+        }
+
+        .description_para_desktop {
+            display: block;
+            font-size: $normal-text;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .description_para_mobile {
+            display: none;
+        }
+
+        .error_key {
+            border-radius: 5px !important;
+
+            .error_para {
+                font-size: $big-text;
+                margin-bottom: auto;
+                color: $dark-red;
+                font-weight: 500;
+
+                span {
+                    margin-top: 5px;
+                }
+            }
+
+            .error_anchor {
+                cursor: pointer;
+
+                .error_crypto {
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+        }
+
+        .body_change {
+            margin: auto;
+            margin-top: 1.9rem;
+
+            .main_hr {
+                height: 1px;
+                opacity: 1;
+                color: $border-grey;
+            }
+
+            .body_header {
+                color: $purple;
+                font-size: $header;
+                font-weight: 600;
+            }
+
+            .setting_height {
+                margin-top: 5px;
+            }
+
+            .main_h1 {
+                background-color: white;
+                font-size: $bigger-head;
+                color: $purple;
+                font-weight: 500;
+            }
+
+            .body_change_2 {
+                top: 0;
+            }
+
+            .body_change_btn {
+                position: absolute;
+                bottom: -5px;
+
+                button {
+                    background-color: white;
+                    font-size: $bigger-head;
+                    font-weight: 500;
+                    letter-spacing: 0px;
+                    padding-bottom: 0px !important;
+                    padding-top: 3px;
+                    border: none;
+                    width: auto;
+                    background: none;
+
+                    .btn_image {
+                        height: 36px;
+                        width: 36px;
+                    }
+                }
+            }
+
+        }
+
+        .content_section {
+            margin-top: 30px !important;
+
+            .content_section_header {
+                font-size: $header;
+                margin-top: 1rem;
+            }
+
+            .content_section_para {
+                font-size: $big-text;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .import_trades {
+            .btn_connect {
+                height: 40px;
+                border-radius: 5px;
+                background-color: $orange;
+                font-size: $normal-text;
+                color: $white;
+                text-align: center;
+                margin-bottom: 70px;
+                font-weight: 600;
+
+                &:hover {
+                    color: $white  !important;
+                    background-color: $orange  !important;
+                }
+
+                &:active {
+                    color: $white  !important;
+                    background-color: $orange  !important;
+                }
+
+            }
+
+            .loader_oauth {
+                margin-bottom: 50px;
+            }
+        }
+
+        .content_api {
+            margin: auto;
+            margin-top: 35px;
+            padding-left: 18px;
+            padding-right: 0px !important;
+
+            .import_header {
+                font-size: $header;
+                font-weight: 600;
+                color: $purple;
+            }
+
+            .content_api_label {
+                margin-left: 0px;
+                font-size: $big-text;
+            }
+            .info_hover{
+                color: $black;
+                border: none !important;
+                background-color: transparent !important;
+            }
+
+            input {
+                width: 100%;
+                margin-left: 0px;
+                border-radius: 5px;
+            }
+
+            .content_api_para {
+                font-size: $normal-text;
+                color: #9F9E9E;
+                margin-top: 5px;
+
+                span {
+                    font-size: $normal-text;
+                }
+            }
+
+            .content_api_anchor {
+                text-decoration: none;
+                color: $middle-grey;
+            }
+
+            .btn_connect {
+                background-color: $orange;
+                border: none !important;
+                padding: 7px 20px;
+                color: $white;
+                font-size:$big-text;
+                border-radius: 5px;
+                margin-top: 10px;
+                margin-bottom: 50px;
+                font-weight:600 ;
+
+                &:hover {
+                    color: $white  !important;
+                    background-color: $orange  !important;
+                }
+
+                &:active {
+                    color: $white  !important;
+                    background-color: $orange  !important;
+                }
+            }
+
+            .loader_connect {
+                margin-bottom: 50px;
+            }
+
+            .loader_connect_s2s {
+                margin-bottom: 50px;
+            }
+        }
+        .next_row {
+            display: none;
+
+            .or {
+                color: $purple;
+            }
+        }
+
+        .oauth {
+            border-right: $border-width;
+            text-align: center;
+            margin-top: 45px;
+            margin-bottom: 45px;
+
+            .fake_div {
+                height: 150px;
+                padding-right: 0px !important;
+                margin-bottom: 50px !important;
+
+                .oauth_image {
+                    top: -40px;
+                    right: 30%;
+                }
+
+                .oauth_btn_div {
+                    position: absolute;
+                    bottom: -20px;
+                    right: 30%;
+
+                    .oauth_button {
+                        background-color: $orange;
+                        border: none !important;
+                        padding: 7px;
+                        color: $white;
+                        font-size:$normal-text;
+                        border-radius: 5px;
+                        margin-top: 10px;
+                        font-weight: 600;
+
+                        &:hover {
+                            color: $white  !important;
+                            background-color: $orange  !important;
+                        }
+
+                        &:active {
+                            color: $white  !important;
+                            background-color: $orange  !important;
+                        }
+                    }
+                }
+
+            }
+
+            .oauth_header {
+                font-size: 1.38rem;
+                color: $purple;
+                margin-top: 20%;
+                margin-left: 0px !important;
+            }
+        }
+
+        .api_anchor_both {
+            color: $purple;
+            font-size: $normal-text;
+        }
+    }
+
+    .sub_btn .btn {
+        margin: 10px;
+        padding: 8px;
+        font-size: $subheader;
+        width: 96px;
+        color: $black;
+        background-color: $top-footer-bg  !important;
+        border-radius: 5px;
+        border: 1px solid $border-grey  !important;
+        margin-top: 30px;
+
+        &:hover {
+            color: $white  !important;
+            background-color: $orange  !important;
+        }
+
+        &:active {
+            color: $white  !important;
+            background-color: $orange  !important;
+        }
+    }
+}
+@media screen and (max-width:1200px) {
+    .import {
+        .main_contain {
+            .next_row {
+                display: block;
+
+                .hr {
+                    display: block;
+                }
+
+                .or {
+                    margin-top: -32px;
+                    display: block;
+                    width: 30px;
+                    left: 50%;
+                }
+            }
+
+            .oauth {
+                border-right: none;
+                margin-bottom: 0px;
+            }
+
+            .import_trades {
+                .loader_oauth {
+                    margin-bottom: 50px;
+                    margin-left: 5.5rem;
+                }
+            }
+
+            .content_api {
+                .loader_connect_s2s {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:773px) {
+    .import {
+        .main_contain {
+            .body_change {
+                margin: auto;
+                margin-top: 1.9rem;
+
+                .main_hr {
+                    height: 1px;
+                    opacity: 1;
+                    color: $border-grey;
+                }
+
+                .body_header {
+                    color: $purple;
+                    font-size: $header;
+                    font-weight: 600;
+                }
+
+                .body_change_2 {
+                    top: 0;
+
+                    .setting_height {
+                        margin-top: 5px;
+                    }
+
+                    .main_h1 {
+                        background-color: white;
+                        font-size: $bigger-head;
+                        color: $purple;
+                        font-weight: 500;
+                    }
+
+                    button {
+                        background-color: white;
+                        font-size: $header;
+                        font-weight: bold;
+                        letter-spacing: 0px;
+                        padding-bottom: 0px !important;
+                        padding-top: 3px;
+                        border: none;
+                        width: auto;
+                        background: none;
+                        padding-left: 20px;
+                        margin-top: -5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:475px) {
+    .import {
+        .main_contain {
+            .mobile_view {
+                display: block;
+            }
+
+            .desk_view {
+                display: none;
+            }
+
+            .description {
+                .description_head {
+                    font-size: $subheader;
+                    color: $purple;
+                    font-weight: bold;
+                }
+            }
+
+            .description_para_mobile {
+                display: block;
+                font-size: $normal-text;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            .description_para_desktop {
+                display: none;
+            }
+
+            .error_key {
+                .error_para {
+                    font-size: $normal-text;
+                }
+            }
+
+            .body_change {
+                margin: auto;
+                margin-top: 1.9rem;
+
+                .main_hr {
+                    height: 1px;
+                    opacity: 1;
+                    color: $border-grey;
+                }
+
+                .body_header {
+                    color: $purple;
+                    font-size: $header;
+                    font-weight: 600;
+                }
+
+                .body_change_2 {
+                    top: 0;
+                }
+
+                .setting_height {
+                    margin-top: 16px;
+
+                    .main_h1 {
+                        background-color: white;
+                        font-size: $header;
+                        color: $purple;
+                        font-weight: 600;
+                    }
+                }
+
+                .body_change_btn {
+                    bottom: 0;
+
+                    button {
+                        font-size: $header;
+
+                        .btn_image {
+                            height: 30px;
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+
+            .oauth {
+                border-right: none;
+
+                .fake_div {
+                    width: 100% !important;
+                    .oauth_image {
+                        top: -40px;
+                        right: 30%;
+                    }
+
+                    .oauth_btn_div {
+                        right: 30%;
+                    }
+                }
+            }
+
+            .content_api {
+                button{
+                    margin-left: 33%;
+                }
+                .content_api_label {
+                    font-size: $big-text;
+
+                    .user_portfolio_info_icon {
+                        cursor: pointer;
+                    }
+                }
+
+                .loader_connect {
+                    margin-bottom: 50px;
+                }
+
+                .loader_connect_s2s {
+                    margin-bottom: 50px;
+                }
+            }
+
+            .content_section {
+                .content_section_header {
+                    font-size: $subheader;
+                }
+            }
+
+            .import_trades {
+                button {
+                    font-size: $normal-text;
+                    padding: 5px;
+                }
+
+                .loader_oauth {
+                    margin-bottom: 50px;
+                    margin-left: 3rem;
+                }
+            }
+        }
+    }
+}

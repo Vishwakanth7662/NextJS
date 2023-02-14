@@ -1,0 +1,56 @@
+@import "../shared/common.module";
+.signup_success {
+    .container_fluid {
+        background-image: url($map);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+
+        .form_container {
+            background: $white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: $box-shadow;
+            margin-top: 15px !important;
+
+            .form_container_head {
+                font-size: 27px;
+                margin-bottom: 10px;
+               color: $purple;
+            }
+
+            .form_container_para {
+                font-size: 18px;
+                color: $grey;
+                font-weight: bold;
+            }
+
+           
+
+            .btn_submit {
+                border-radius: 12px;
+                margin-top: 20px;
+                background-color: $green;
+                color: $black;
+                font-weight: 500;
+                border: none;
+            }
+        }
+
+        .navbar_img {
+            width: 300px;
+            height: 50px;
+        }
+    }
+
+
+
+
+    @media(max-width:768px) {
+        .navbar_brand img {
+            width: 200px !important;
+            height: 40px !important;
+        }
+    }
+
+}

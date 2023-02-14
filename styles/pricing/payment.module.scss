@@ -1,0 +1,496 @@
+@import '../shared/common.module';
+
+.paymentLoader {
+    margin-top: 20rem;
+    margin-bottom: 20rem;
+
+    img {
+        width: 250px;
+    }
+
+    p {
+        width: 400px;
+
+        @media (max-width: 768px) {
+            width: auto;
+        }
+    }
+}
+
+.paymentPage {
+    margin-top: 70px;
+
+    .cards {
+        h3 {
+            font-size: $subheader;
+            font-weight: 700;
+        }
+
+        .cardsDiv {
+            font-size: $big-text;
+            border-bottom: 1px solid $border-grey;
+
+            @media (max-width: 767.5px) {
+                font-size: $normal-text;
+            }
+
+            .checks {
+                border: none;
+                background: transparent;
+                width: 16px;
+                height: 16px;
+                left: 13px;
+                top: 35px;
+            }
+
+            .label {
+                color: $border-grey;
+            }
+        }
+    }
+
+    .addOnPayment {
+        margin-bottom: 2rem;
+        height: 100%;
+        overflow: scroll;
+        max-width: 717px;
+
+        .mainHeading {
+            margin-top: 4rem;
+
+            .title {
+                top: -20px;
+
+                h2 {
+                    color: $purple;
+                    width: 225px;
+                    margin: auto;
+                    background-color: $white;
+                    font-weight: 700;
+                    font-size: $bigger-head;
+                }
+            }
+        }
+
+        .secondHead {
+            div {
+                font-weight: 500;
+                font-size: $subheader;
+            }
+
+            button {
+                color: $orange;
+                border: 1px solid $orange;
+                background-color: $white;
+                padding: 10px 20px;
+                border-radius: 5px;
+            }
+        }
+
+        .subHead {
+            font-size: $big-text;
+
+            @media (max-width:768px) {
+                font-size: $normal-text;
+            }
+
+            span {
+                color: $purple;
+                font-weight: 700;
+            }
+        }
+
+        .featuresDiv {
+            font-size: $big-text;
+            max-width: 711px;
+            padding: 40px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+
+            @media (max-width:768px) {
+                font-size: $normal-text;
+            }
+
+            .features {
+                img {
+                    width: 20px;
+                    height: 27px;
+                }
+            }
+        }
+
+        .termsConditions {
+            font-size: $big-text;
+
+            @media (max-width:768px) {
+                font-size: $normal-text;
+            }
+
+            a {
+                color: $purple;
+            }
+
+            .formSwitch .formCheckInput:checked {
+                background-color: #74A669;
+                border: none;
+            }
+        }
+
+        .paymentBlock {
+            max-width: 711px;
+
+            .checkoutForm {
+                border: 1px solid $border-grey;
+                padding: 20px;
+
+                h1 {
+                    color: $purple;
+                    font-weight: 700;
+                    font-size: $header;
+                }
+
+                .pay {
+                    background-color: $orange;
+                    color: $white;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 15px 23px;
+
+                    &:disabled {
+                        background-color: #e5e5e5;
+                        color: #c9c9c9;
+                    }
+
+                    @media (max-width: 767.5px) {
+                        font-size: $normal-text;
+                    }
+                }
+            }
+
+            .cards {
+                h3 {
+                    font-size: $subheader;
+                    font-weight: 700;
+                }
+
+                .cardsDiv {
+                    font-size: $big-text;
+                    border-bottom: 1px solid $border-grey;
+
+                    @media (max-width: 767.5px) {
+                        font-size: $normal-text;
+                    }
+
+                    .checks {
+                        border: none;
+                        background: transparent;
+                        width: 16px;
+                        height: 16px;
+                        left: 13px;
+                        top: 35px;
+                    }
+
+                    .label {
+                        color: $border-grey;
+                    }
+                }
+            }
+
+            .useCard {
+                background-color: $orange;
+                color: $white;
+                border: none;
+                font-size: $big-text;
+                padding: 14px 25px;
+                border-radius: 5px;
+
+                &:disabled {
+                    background-color: #e5e5e5;
+                    color: #c9c9c9;
+                }
+
+                @media (max-width: 767.5px) {
+                    font-size: $normal-text;
+                }
+            }
+
+            .makePayment {
+                background-color: $white;
+                color: $orange;
+                border: 1px solid $orange;
+                border-radius: 5px;
+                padding: 15px 23px;
+
+                &:disabled {
+                    background-color: #e5e5e5;
+                    color: #c9c9c9;
+                }
+
+                @media (max-width: 767.5px) {
+                    font-size: $normal-text;
+                }
+            }
+        }
+
+    }
+
+    .note {
+        background-color: $pale-yellow;
+        border-radius: 5px;
+        padding: 15px;
+        font-size: $normal-text;
+
+        a {
+            color: $purple;
+        }
+    }
+
+    .loaderDiv {
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
+
+    .selectedPlanPopup {
+        .black {
+            background-color: $black;
+            opacity: 0.7;
+        }
+
+        .plan {
+            z-index: +999;
+            background-color: $white;
+            width: 90%;
+            left: 5%;
+            border-radius: 5px;
+            top: 5rem;
+            padding: 30px;
+            overflow: scroll;
+
+            .dismiss {
+                border: none;
+                background: transparent;
+                right: 0;
+                right: -32px;
+                top: -27px;
+            }
+
+            .premiumPlan {
+                .mainTitle {
+                    font-size: $big-subheader;
+                }
+
+                .featureBorder {
+                    font-size: $normal-text;
+                }
+            }
+
+            .close {
+                border: none;
+                border-radius: 5px;
+                background-color: #999999;
+                color: $white;
+                font-size: $normal-text;
+                padding: 10px 20px;
+            }
+
+            .changePlan {
+                @extend .close;
+                background-color: $orange;
+            }
+        }
+    }
+
+    .rightSide {
+
+        @media (max-width: 767.5px) {
+            margin: auto;
+            width: 100% !important;
+            padding-left: 0;
+        }
+
+        @media (min-width: 767.5px) {
+            width: 50% !important;
+            padding-left: 3rem;
+        }
+
+        .error {
+            b {
+                color: #C15358;
+            }
+
+            background-color: #FFF0F2;
+            border: 1px solid #FFDBE0;
+            border-radius: 5px;
+            padding: 10px 15px;
+        }
+
+        .checkoutForm {
+            .error {
+                b {
+                    color: #C15358;
+                }
+
+                background-color: #FFF0F2;
+                border: 1px solid #FFDBE0;
+                border-radius: 5px;
+                padding: 10px 15px;
+            }
+
+            h1 {
+                font-size: $header;
+                color: $purple;
+                font-weight: 700;
+            }
+
+            .pay {
+                border: none;
+                background-color: $orange;
+                color: $white;
+                border-radius: 5px;
+                padding: 7px 25px;
+            }
+        }
+
+        .preStripe {
+            .head {
+                font-size: $header;
+                color: $purple;
+                font-weight: 700;
+            }
+
+            p {
+                font-size: $big-text;
+
+                @media (max-width: 767.5px) {
+                    font-size: $normal-text;
+                }
+
+                span {
+                    font-size: $big-text;
+                    font-weight: 700;
+                    color: $purple;
+
+                    @media (max-width: 767.5px) {
+                        font-size: $header;
+                    }
+                }
+            }
+
+            .box {
+                background-color: $top-footer-bg;
+                padding: 20px 14px;
+
+
+                .formSwitch .formCheckInput:checked {
+                    background-color: #74A669;
+                    border: none;
+                }
+
+
+                b {
+                    color: $purple;
+                    font-size: $header;
+                }
+
+                @media (max-width: 767.5px) {
+                    font-size: $normal-text;
+                }
+
+                a {
+                    color: $purple;
+                }
+            }
+
+            .makePayment {
+                background-color: $orange;
+                color: $white;
+                border: none;
+                border-radius: 5px;
+                padding: 15px 23px;
+
+                &:disabled {
+                    background-color: #e5e5e5;
+                    color: #c9c9c9;
+                }
+
+                @media (max-width: 767.5px) {
+                    font-size: $normal-text;
+                }
+            }
+        }
+
+        .showPlanButton {
+            border: none;
+            background: transparent;
+            font-size: $normal-text;
+            color: $purple;
+            padding: 0;
+            text-decoration: underline;
+        }
+
+        .cards {
+            h3 {
+                font-size: $header;
+                color: $purple;
+                font-weight: 700;
+            }
+
+            .cards-div {
+                font-size: $big-text;
+                border-bottom: 1px solid $border-grey;
+
+                @media (max-width: 767.5px) {
+                    font-size: $normal-text;
+                }
+
+                input {
+                    border: none;
+                    background: transparent;
+                    width: 16px;
+                    height: 16px;
+                    left: 0;
+                    top: 35px;
+                }
+
+                .label {
+                    color: $border-grey;
+                }
+            }
+
+            .useCard {
+                background-color: $orange;
+                color: $white;
+                border: none;
+                font-size: $big-text;
+                padding: 14px 25px;
+                border-radius: 5px;
+
+                &:disabled {
+                    background-color: #e5e5e5;
+                    color: #c9c9c9;
+                }
+
+                @media (max-width: 767.5px) {
+                    font-size: $normal-text;
+                }
+            }
+
+            .makePayment {
+                background-color: $orange;
+                color: $white;
+                border: none;
+                border-radius: 5px;
+                padding: 15px 23px;
+
+                &:disabled {
+                    background-color: #e5e5e5;
+                    color: #c9c9c9;
+                }
+
+                @media (max-width: 767.5px) {
+                    font-size: $normal-text;
+                }
+            }
+        }
+    }
+}

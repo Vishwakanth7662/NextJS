@@ -1,0 +1,832 @@
+@import '../shared/common.module';
+
+.popUp {
+    width: 80%;
+    left: 10%;
+    top: 10rem;
+    height: 26.688rem;
+    z-index: 1000;
+    background-color: $white;
+    border-radius: 10px;
+    padding: 40px 67px;
+    overflow: scroll;
+
+    .title {
+        font-size: $header;
+    }
+
+    p {
+        font-size: $big-text;
+
+        span {
+            color: #AA5637;
+        }
+    }
+
+    .searchCurrency {
+        width: 50%;
+        border: 1px solid $border-grey;
+        height: 45px;
+        border-radius: 5px;
+        font-size: $big-text;
+        color: $border-grey;
+        padding: 10px;
+    }
+
+    .currencies {
+        margin-top: 0;
+        width: 50%;
+        height: 200px;
+        overflow: scroll;
+        border: 1px solid $border-grey;
+        border-radius: 5px;
+
+
+        button {
+            background: transparent;
+            border: none;
+        }
+    }
+
+    .headings {
+        border-top: 1px solid $border-dark-grey;
+        font-size: $big-text;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid $border-dark-grey;
+    }
+
+    .mappedTxn {
+
+        .col-3 {
+            padding: 10px 0;
+            border-bottom: 1px solid $border-dark-grey;
+        }
+
+        .unchecked {
+            border: none;
+            background: transparent;
+            width: 16px;
+            height: 16px;
+            left: -40px;
+            top: 12px;
+        }
+
+
+    }
+
+    .generateUnchecked {
+        border: none;
+        background: transparent;
+        width: 16px;
+        height: 16px;
+        left: 22px;
+        bottom: 8rem;
+    }
+
+    .generateUncheckedSwap {
+        border: none;
+        background: transparent;
+        width: 16px;
+        height: 16px;
+        left: 22px;
+    }
+
+
+
+    .save {
+        background-color: $orange;
+        color: $white;
+        border-radius: 5px;
+        padding: 10px 24px;
+        border: none;
+        font-size: $big-text;
+
+        &:disabled {
+            background-color: #E5E5E5;
+            color: #C9C9C9
+        }
+    }
+
+    .cancel {
+        @extend .save;
+        background-color: $top-footer-bg;
+        border: 1px solid #c9c9c9;
+        color: $black;
+    }
+}
+
+.transactions {
+    margin-top: 70px;
+
+    .mainHeading {
+        font-weight: 700;
+        color: $purple;
+        font-size: $header;
+    }
+
+    .redirection {
+        .addAccBtn {
+            background-color: $orange;
+            color: $white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .myAccBtn {
+            border: 1px solid $orange;
+            background-color: $white;
+            color: $orange;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+    }
+
+    .mainTypes {
+        button {
+            background-color: $white;
+            border: 1px solid $border-grey;
+            padding: 10px;
+            width: 190px;
+            height: 69px;
+            border-radius: 5px;
+        }
+
+        .purpleFilter {
+            background-color: $purple;
+            color: $white;
+        }
+    }
+
+    .mainFilters {
+        .applyDate {
+            background-color: $orange;
+            height: 100%;
+            border: none;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            font-weight: 500;
+            color: $white;
+        }
+
+        .resetDateFilter {
+            background: transparent;
+            border: none;
+        }
+
+        .calendarEl {
+            position: absolute;
+            border: 1px solid black;
+            z-index: 9999;
+            margin-top: 8px;
+            width: 100%;
+            padding: 0;
+            top: 89%;
+            left: 0;
+        }
+
+        .dropdownOpenBtn {
+            border: 1px solid $border-grey;
+            height: 40px;
+            border-radius: 5px;
+            width: 190px;
+            color: $btnborder;
+            text-align: start;
+        }
+
+        .dropdownOpenBtn::after {
+            position: absolute;
+            right: 10px;
+            top: 17px;
+        }
+
+        .dropdownOpenBtnDate {
+            @extend .dropdownOpenBtn;
+            width: 365px;
+
+            .labelBtn {
+                border: none;
+                background: transparent;
+                width: 100%;
+                color: $btnborder;
+                text-align: start;
+            }
+        }
+
+        .dropdownContent {
+            width: 100%;
+            padding: 10px;
+
+
+            .checksDiv {
+                max-height: 200px;
+                overflow: scroll;
+            }
+        }
+
+        .dropdownDivider {
+            border: 1px solid $border-grey;
+        }
+
+        .reset {
+            background-color: $purple;
+            border: none;
+            color: $white;
+            width: 50%;
+            text-align: center;
+            border-radius: 50px;
+        }
+    }
+
+    .showSelectedFilters {
+        .filter {
+            width: auto;
+            border-radius: 5px;
+            background-color: $top-footer-bg;
+            border: 1px solid $border-grey;
+            padding: 5px 7px;
+            font-size: $normal-text;
+
+            button {
+                background: transparent;
+                border: none;
+            }
+        }
+    }
+
+    .txnTable {
+        border-top: 1px solid $border-grey;
+        overflow-y: scroll;
+        min-height: 30rem;
+        max-height: 50rem;
+        margin-bottom: 5rem;
+        overflow-x: auto;
+
+        .headings {
+            border-bottom: 2px solid $border-grey;
+            top: 0;
+            z-index: +999;
+            background-color: $white;
+            min-width: 62rem;
+
+            .sortingIcon {
+                height: 17px;
+                cursor: pointer;
+            }
+        }
+
+        .allTxns {
+            font-size: $text;
+            position: relative;
+            min-width: 62rem;
+
+            .mainLoader {
+                position: absolute;
+                width: calc(100% - 1rem);
+                z-index: +9999;
+                height: 100%;
+                left: 0;
+                background: rgba(255, 255, 255, 0.8);
+
+                .syncLoader {
+                    filter: drop-shadow(0 0.5rem 0.5rem rgba(0, 0, 0, 0.2));
+                    position: absolute;
+                    top: 40%;
+                    left: 50%;
+                }
+            }
+
+            .txnRow {
+                border-bottom: 1px solid $border-grey;
+
+                div {
+                    word-break: break-all;
+                }
+
+                .txnIcon {
+                    left: -14px;
+                    top: 18px;
+                }
+
+                .editIcon {
+                    background: transparent;
+                    border: none;
+                    right: 27px;
+                    top: -3px;
+                }
+
+                .cancel {
+                    background: transparent;
+                    border: none;
+                    top: -3px;
+                    right: 0;
+                }
+
+                .flag {
+                    position: absolute;
+                    right: 10px;
+                    top: 4px;
+                }
+
+                .accountImage {
+                    height: 16px;
+                    width: 16px;
+                }
+
+                .currencyImg {
+                    height: 16px;
+                    width: 16px;
+                }
+
+                .editDropdownBtn {
+                    border: 1px solid $border-grey;
+                }
+
+                .dropdownMenu {
+                    width: 100%;
+                    max-height: 200px;
+                    overflow: scroll;
+                    padding: 10px;
+
+                    button {
+                        width: 100%;
+                        background: transparent;
+                        border: none;
+                        text-align: start;
+                        border-bottom: 1px solid $border-grey;
+                    }
+                }
+
+                .editOutAmount {
+                    input {
+                        height: 32px;
+                        border: 1px solid $border-grey;
+                        border-radius: 5px;
+                        padding: 6px;
+                        padding-right: 50%;
+                    }
+
+                    .editDropdown {
+                        top: 0;
+                        right: 0%;
+                        background-color: transparent;
+                        border: none;
+                        border-left: 1px solid $border-grey;
+                        height: 32px;
+                        border-radius: 5px;
+                        width: 50%;
+
+                        img {
+                            position: absolute;
+                            right: 7px;
+                            top: 8px;
+                        }
+                    }
+
+                    .searchCurrency {
+                        max-height: 200px;
+                        overflow: scroll;
+                        background-color: white;
+                        border: 1px solid $border-grey;
+                        z-index: +999;
+
+                        .searchBar {
+                            border-radius: 5px;
+                            border: 1px solid $border-grey;
+                            width: 94%;
+                            margin: 3%;
+                            padding-right: 0;
+                        }
+
+                        button {
+                            background: transparent;
+                            border: none;
+
+                            .currency {
+                                font-size: $normal-text;
+                                border-bottom: 1px solid $border-grey;
+                                background-color: $white;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+
+            .nativeWarning {
+                margin-top: 10px;
+                background-color: $pale-yellow;
+                border-radius: 5px;
+                padding: 15px;
+                color: #8C8357;
+                font-size: $normal-text;
+            }
+
+            .success {
+                background-color: $success-msg-green;
+                width: 90%;
+                border: 1px solid $dark-green;
+                margin: auto;
+                color: $dark-green;
+                height: 40px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                border-radius: 5px;
+
+                button {
+                    top: -14px !important;
+                    right: -7px !important;
+                    background: transparent;
+                    border: none;
+                    padding: 0 !important;
+                }
+
+
+            }
+
+            .error {
+
+                background-color: #FFF0F2;
+                width: 90%;
+                border: 1px solid $error-msg-red-border;
+                margin: auto;
+                color: #B5747E;
+                height: auto;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                border-radius: 5px;
+
+                b {
+                    color: #8C0858;
+                }
+
+            }
+        }
+    }
+}
+
+.transactionsMobile {
+    margin-top: 70px;
+    margin-bottom: 3rem;
+
+    .heading {
+        color: $purple;
+        font-size: $subheader;
+        font-weight: 700;
+        margin-top: 2rem;
+    }
+
+    .addAcc {
+        border: none;
+        background-color: $orange;
+        color: $white;
+        border-radius: 5px;
+        padding: 10px 8px;
+        font-size: $normal-text;
+    }
+
+    .myAcc {
+        @extend .addAcc;
+        color: $orange;
+        background: $white;
+        border: 1px solid $orange;
+    }
+
+    .mainTypes {
+        width: 100%;
+        border: 1px solid $purple;
+        color: $purple;
+        background: $white;
+        border-radius: 5px;
+        padding: 10px;
+
+        img {
+            height: 25px;
+        }
+
+        .dropdownArrow {
+            height: 8px;
+            width: 12px;
+        }
+    }
+
+    .typesDropdown {
+        border: 1px solid $purple;
+        border-radius: 3px;
+
+        .mainTypesInDropdown {
+            width: 100%;
+            background: $white;
+            border: none;
+            color: $purple;
+            padding: 5px 10px;
+
+            img {
+                height: 25px;
+            }
+        }
+    }
+
+    .filtersBtn {
+        border: 1px solid $border-grey;
+        color: $black;
+        border-radius: 5px;
+        padding: 0.375rem 0.75rem;
+    }
+
+    .filtersBox {
+        background: $white;
+        z-index: +9999;
+        border: 1px solid $border-grey;
+        border-radius: 5px;
+        padding: 10px;
+
+        .applyDate {
+            background-color: $orange;
+            height: 100%;
+            border: none;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            font-weight: 500;
+            color: $white;
+        }
+
+        .resetDateFilter {
+            background: transparent;
+            border: none;
+        }
+
+        .calendarEl {
+            position: absolute;
+            border: 1px solid black;
+            z-index: 9999;
+            margin-top: 8px;
+            width: 100%;
+            padding: 0;
+            top: 89%;
+            left: 0;
+        }
+
+        .dropdownOpenBtn {
+            border: 1px solid $border-grey;
+            height: 40px;
+            border-radius: 5px;
+            width: 100%;
+            color: $btnborder;
+            text-align: start;
+        }
+
+        .dropdownOpenBtn::after {
+            position: absolute;
+            right: 10px;
+            top: 17px;
+        }
+
+        .dropdownOpenBtnDate {
+            @extend .dropdownOpenBtn;
+            width: 365px;
+
+            .labelBtn {
+                border: none;
+                background: transparent;
+                width: 100%;
+                color: $btnborder;
+                text-align: start;
+            }
+        }
+
+        .dropdownContent {
+            width: 100%;
+            padding: 10px;
+
+
+            .checksDiv {
+                max-height: 200px;
+                overflow: scroll;
+            }
+        }
+
+        .dropdownDivider {
+            border: 1px solid $border-grey;
+        }
+
+        .reset {
+            background-color: $purple;
+            border: none;
+            color: $white;
+            width: 50%;
+            text-align: center;
+            border-radius: 50px;
+        }
+    }
+
+    .showSelectedFilters {
+        .filter {
+            width: auto;
+            border-radius: 5px;
+            background-color: $top-footer-bg;
+            border: 1px solid $border-grey;
+            padding: 5px 7px;
+            font-size: $normal-text;
+
+            button {
+                background: transparent;
+                border: none;
+            }
+        }
+    }
+
+    .mobileTable {
+        .allTxns {
+            font-size: $text;
+            position: relative;
+            max-height: 40rem;
+            overflow: scroll;
+
+            .mobileTxnRow {
+                padding: 10px 0px;
+                border-bottom: 1px solid $border-grey;
+
+                &:last-of-type {
+                    border: none;
+                }
+            }
+
+            .mainLoader {
+                position: absolute;
+                width: calc(100% - 1rem);
+                z-index: +9999;
+                height: 100%;
+                left: 0;
+                background: rgba(255, 255, 255, 0.8);
+
+                .syncLoader {
+                    filter: drop-shadow(0 0.5rem 0.5rem rgba(0, 0, 0, 0.2));
+                    position: absolute;
+                    top: 40%;
+                    left: 50%;
+                }
+            }
+
+            .txnRow {
+                border-bottom: 2px solid $border-dark-grey;
+
+                div {
+                    word-break: break-all;
+                }
+
+                .txnIcon {
+                    left: -14px;
+                    top: 18px;
+                }
+
+                .editIcon {
+                    background: transparent;
+                    border: none;
+                }
+
+                .cancel {
+                    background: transparent;
+                    border: none;
+                }
+
+
+                .accountImage {
+                    height: 16px;
+                    width: 16px;
+                }
+
+                .currencyImg {
+                    height: 16px;
+                    width: 16px;
+                }
+
+                .editDropdownBtn {
+                    border: 1px solid $border-grey;
+                }
+
+                .dropdownMenu {
+                    width: 100%;
+                    max-height: 200px;
+                    overflow: scroll;
+                    padding: 10px;
+
+                    button {
+                        width: 100%;
+                        background: transparent;
+                        border: none;
+                        text-align: start;
+                        border-bottom: 1px solid $border-grey;
+                    }
+                }
+
+                .editOutAmount {
+                    input {
+                        height: 32px;
+                        border: 1px solid $border-grey;
+                        border-radius: 5px;
+                        padding: 6px;
+                        padding-right: 50%;
+                    }
+
+                    .editDropdown {
+                        top: 0;
+                        right: 0%;
+                        background-color: transparent;
+                        border: none;
+                        border-left: 1px solid $border-grey;
+                        height: 32px;
+                        border-radius: 5px;
+                        width: 50%;
+
+                        img {
+                            position: absolute;
+                            right: 7px;
+                            top: 8px;
+                        }
+                    }
+
+                    .searchCurrency {
+                        max-height: 200px;
+                        overflow: scroll;
+                        background-color: white;
+                        border: 1px solid $border-grey;
+                        z-index: +999;
+
+                        .searchBar {
+                            border-radius: 5px;
+                            border: 1px solid $border-grey;
+                            width: 94%;
+                            margin: 3%;
+                            padding-right: 0;
+                        }
+
+                        button {
+                            background: transparent;
+                            border: none;
+
+                            .currency {
+                                font-size: $normal-text;
+                                border-bottom: 1px solid $border-grey;
+                                background-color: $white;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+
+            .nativeWarning {
+                margin-top: 10px;
+                background-color: $pale-yellow;
+                border-radius: 5px;
+                padding: 15px;
+                color: #8C8357;
+                font-size: $normal-text;
+            }
+
+            .success {
+                background-color: $success-msg-green;
+                width: 90%;
+                border: 1px solid $dark-green;
+                margin: auto;
+                color: $dark-green;
+                height: 40px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                border-radius: 5px;
+
+                button {
+                    top: -14px !important;
+                    right: -7px !important;
+                    background: transparent;
+                    border: none;
+                    padding: 0 !important;
+                }
+
+
+            }
+
+            .error {
+
+                background-color: #FFF0F2;
+                width: 90%;
+                border: 1px solid $error-msg-red-border;
+                margin: auto;
+                color: #B5747E;
+                height: auto;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                border-radius: 5px;
+
+                b {
+                    color: #8C0858;
+                }
+
+            }
+        }
+    }
+
+}

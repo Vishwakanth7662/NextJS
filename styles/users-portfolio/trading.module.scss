@@ -1,0 +1,244 @@
+@import "../shared/common.module";
+.trading_main {
+    .trading_accounts {
+        .top_trading {
+            margin-left: auto;
+        }
+
+        .top_accounts_subhead {
+            position: relative;
+            border-radius: 13px;
+            margin-left: 12px;
+            min-height: 300px;
+
+            .top_trading_heading_btn {
+                position: absolute;
+                border: none;
+                background-color: white;
+                margin-top: -16px;
+                transform: translateX(-50%);
+
+                .top_trading_heading {
+                    color: $purple;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+
+            .background_accounts {
+                height: 280px;
+                width: 400px;
+                background: linear-gradient(137.68deg, #504080 8.8%, #DE937E 92%);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -17rem;
+                border-radius: 25px;
+            }
+
+            .background_exchange_trading {
+                height: 280px;
+                width: 380px;
+                margin: auto;
+                background: linear-gradient(137.68deg, #504080 8.8%, #DE937E 92%);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -17rem;
+                border-radius: 25px;
+            }
+
+            .trading_table {
+                overflow-x: hidden;
+                .static_border_bottom {
+                    .border_adjustment {
+                        font-size: 14px;
+                        color: #808080;
+                    }
+                }
+
+                .all_crypto_trading {
+                    color: #808080;
+                    min-height: 220px;
+                    .row_trading {
+                        border-bottom: 1px solid #DCDCDC;
+                        margin-top: 4px;
+
+                        .inside_trade {
+                            overflow-x: hidden;
+                        }
+
+                        .icon_size {
+                            height: 18px;
+                            width: 18px;
+                            margin-right: 5px;
+                            margin-top: 3px;
+                        }
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    .main_crypto {
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .pagination {
+                margin-top: 10px;
+                .pre_anchor{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                .pre_anchor:hover{
+                    color: $purple;
+                }
+                .next_anchor{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                .next_anchor:hover{
+                    color: $purple; 
+                }
+                .page{
+                    color: #AAAAAA;
+                    border: none;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+
+                .active_page{
+                    color: $purple !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1199px) and (min-width:991px) {
+    .trading_main {
+        .trading_accounts {
+            .top_trading {
+                margin: auto;
+            }
+            .top_accounts_subhead{
+                margin: auto;
+                .top_trading_heading_btn {
+                    transform: translateX(-50%);
+                }
+                text-align: center;
+
+                .background_accounts {
+                    width: 350px;
+                    position: relative;
+                    top: 1.4rem;
+                    transform: none;
+                    left: 0;
+                    margin-bottom: 20px;
+                    margin-left: 10rem;
+                }
+
+                .background_exchange_trading {
+                    width: 380px;
+                    position: relative;
+                    top: 1.4rem;
+                    transform: none;
+                    left: 0;
+                    margin-bottom: 30px;
+                    margin-left: 10rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width:991px) {
+    .trading_main {
+        .trading_accounts {
+            .top_accounts_subhead {
+                margin-left: 0px !important;
+                .top_trading_heading_btn {
+                    transform: translateX(-50%);
+                }
+                text-align: center;
+
+                .background_accounts {
+                    width: 350px;
+                    position: relative;
+                    top: 1.4rem;
+                    transform: none;
+                    left: 0;
+                    margin-bottom: 20px;
+                    margin-left: 10rem;
+                }
+                .exchange_section{
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                }
+                .background_exchange_trading {
+                    width: 370px;
+                    position: relative;
+                    top: 1.4rem;
+                    transform: none;
+                    left: 0;
+                    margin-bottom: 30px;
+                    margin-left: 10rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .trading_main {
+        .trading_accounts {
+            .top_accounts_subhead {
+                margin-left: 0px !important;
+
+                .top_trading_heading_btn {
+                    transform: translateX(-50%);
+                }
+
+                .top_trading_heading {
+                    left: 20% !important;
+                }
+
+                .background_accounts {
+                    width: 350px;
+                    position: relative;
+                    top: 1.4rem;
+                    transform: none;
+                    left: 0;
+                    margin-bottom: 20px;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                    padding-left: 0px !important;
+                }
+
+                .exchange_section{
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                }
+                .background_exchange_trading {
+                    width: 400px;
+                    position: relative;
+                    top: 1.4rem;
+                    transform: none;
+                    left: 0;
+                    margin-bottom: 30px;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                    padding-left: 0px !important;
+                }
+                .trading_table{
+                    margin-top: 73px !important;
+                }
+                .mainChart{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
